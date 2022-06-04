@@ -11,11 +11,11 @@ auth: password
 password: code-server-password
 EOF
 
-echo "code-server addr: localhost:4000"
-echo "password: code-server-password"
-echo "NOTICE: Change the password!"
-
+# check systemd
 if command -v systemctl &> /dev/null
 then
     sudo systemctl enable --now code-server@$USER
+    echo "code-server addr: localhost:4000"
+    echo "password: code-server-password"
+    echo "NOTICE: Change the password!"
 fi
