@@ -1,0 +1,29 @@
+proxy_vagrantfile = 'VagrantfileProxy'
+load proxy_vagrantfile if File.exists?(proxy_vagrantfile)
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "debian/bullseye64"
+
+  # code server
+  config.vm.network "forwarded_port", guest: 4000, host: 4000
+  # kind api-server
+  config.vm.network "forwarded_port", guest: 4001, host: 4001
+  # other
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
+  config.vm.network "forwarded_port", guest: 8081, host: 8081
+  config.vm.network "forwarded_port", guest: 8082, host: 8082
+  
+  # add new port: change the config, run `vagrant reload`
+
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 8000
+    v.cpus = 3
+  end
+
+  # config.vm.provision "shell", path: "setup_docker.sh", privileged: false
+  config.vm.provision "docker"
+  config.vm.provision "shell", path: "setup_dev.sh", privileged: false
+  config.vm.provision "shell", path: "setup_coder.sh", privileged: false
+  config.vm.provision "shell", path: "setup_k8s_tools.sh", privileged: false
+  config.vm.provision "shell", path: "setup_kind.sh", privileged: false
+end
