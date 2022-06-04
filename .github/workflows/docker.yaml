@@ -6,8 +6,8 @@ on:
       - main
     paths: 
       - '.github/workflows/docker.yaml'
-      - 'debian/'
-      - 'home/'
+      - 'debian/**'
+      - 'home/**'
 jobs:
   docker:
     runs-on: ubuntu-latest
