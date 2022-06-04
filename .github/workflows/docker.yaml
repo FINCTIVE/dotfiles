@@ -6,8 +6,6 @@ on:
         description: 'Log level'     
         required: true
         default: 'warning'
-      tags:
-        description: ''  
   push:
     branches:
       - main
