@@ -26,6 +26,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./debian
+          context: debian
           push: true
           tags: finctive/playground:latest
