@@ -10,7 +10,7 @@ on:
     branches:
       - main
     paths: 
-      - './.github/workflows/'
+      - './.github/workflows/docker.yaml'
       - 'debian/'
       - 'home/'
 jobs:
