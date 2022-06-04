@@ -1,8 +1,8 @@
 FROM debian:bullseye
 
 WORKDIR /init-scripts
-RUN apt update && apt install sudo
+RUN apt-get update && apt-get install sudo bash
 COPY setup_dev.sh setup_k8s_tools.sh setup_coder.sh  .
-RUN  sh ./setup_dev.sh \
-  && sh ./setup_coder.sh \
-  && sh ./setup_k8s_tools.sh
+RUN  bash ./setup_dev.sh \
+  && bash ./setup_coder.sh \
+  && bash ./setup_k8s_tools.sh
