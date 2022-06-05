@@ -18,6 +18,6 @@ EOF
 # require: docker
 kind create cluster --config kind-config.yaml
 
-echo "change kube config file from 0.0.0.0 to localhost"
-
-# TODO: automation & doc
+# exposed to outside
+# fix("0.0.0.0" is not a destination)
+sed -i 's/0.0.0.0/localhost/g' ~/.kube/config
