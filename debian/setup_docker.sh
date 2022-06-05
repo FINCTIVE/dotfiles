@@ -1,3 +1,4 @@
+#!/bin/sh
 # reference: https://docs.docker.com/engine/install/debian/
 sudo apt-get update
 sudo apt-get install -y ca-certificates curl gnupg lsb-release
