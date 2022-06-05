@@ -1,7 +1,7 @@
 #!/bin/sh
 sudo apt-get update
 sudo apt-get install -y \
-  iputils-ping curl wget iputils-ping iproute2 net-tools \
+  iputils-ping curl wget iputils-ping iproute2 net-tools procps \
   git make
 sudo apt-get install -y \
   zsh autojump ranger fzf silversearcher-ag vim \
