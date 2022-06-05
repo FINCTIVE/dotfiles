@@ -1,3 +1,7 @@
+# Scripts
+
+- all `.sh` files were designed to copy and run with normal users on a server.
+
 # VM Usage
 
 ## Expose kind cluster api-server to host
