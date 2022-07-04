@@ -4,9 +4,9 @@
 
 # install
 brew install \ 
-  watch \
+  watch tmux htop ncdu nload jq \
   chezmoi fzf autojump ranger the_silver_searcher \
-  tmux htop ncdu nload jq 
+  tldr
 
 # oh-my-zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
