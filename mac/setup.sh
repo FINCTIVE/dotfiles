@@ -7,6 +7,7 @@ brew install \
   watch tmux htop ncdu nload jq \
   chezmoi fzf autojump ranger the_silver_searcher \
   kubectl kubectx helm stern derailed/popeye/popeye \
+  istioctl \
   tldr
 
 # oh-my-zsh
