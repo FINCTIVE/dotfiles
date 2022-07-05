@@ -1,10 +1,23 @@
+# install brew
+# setup env variables
+
+
 # install
-brew install watch
+brew install \ 
+  watch tmux htop ncdu nload jq \
+  chezmoi fzf autojump ranger the_silver_searcher \
+  kubectl kubectx helm stern derailed/popeye/popeye \
+  istioctl \
+  tldr
+
+# oh-my-zsh
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 
 # init dotfiles
 chezmoi init git@github.com:FINCTIVE/dotfiles.git
+chezmoi init https://github.com/FINCTIVE/dotfiles.git
 chezmoi apply
-fish -c "curl -sL https://git.io/fisher | source && fisher update"
 
 echo "chezmoi diff => diff"
 echo "chezmoi cd => go to the dotfiles folder"
