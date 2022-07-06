@@ -9,12 +9,16 @@ zstyle ':omz:update' frequency 15
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git zsh-autosuggestions fzf jump autojump kubectl)
+plugins=(git zsh-autosuggestions fzf jump autojump kubectl kube-ps1)
 
 source $ZSH/oh-my-zsh.sh
 
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 export EDITOR=vim
+
+KUBE_PS1_PREFIX="["
+KUBE_PS1_SUFFIX="]"
+PROMPT='$(kube_ps1)'$PROMPT
 
 merge_kube_configs() {
 	KUBECONFIG=$(find $PWD -type f | xargs | sed -e 's/ /:/g') kubectl config view --flatten > $HOME/.kube/config
