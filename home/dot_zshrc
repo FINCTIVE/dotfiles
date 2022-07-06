@@ -16,11 +16,9 @@ source $ZSH/oh-my-zsh.sh
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 export EDITOR=vim
 
-CONFIG_FILES_PATH=$HOME/.kube/config-files
-if [[ -d $CONFIG_FILES_PATH ]]
-then
-	export KUBECONFIG=$(find $CONFIG_FILES_PATH -type f | xargs | sed -e 's/ /:/g')
-fi
+merge_kube_configs() {
+	KUBECONFIG=$(find $PWD -type f | xargs | sed -e 's/ /:/g') kubectl config view --flatten > $HOME/.kube/config
+}
 
 alias watchkgetpod='watch -n 1 kubectl get pod'
 alias watchkgetall='watch -n 5 kubectl get all'
