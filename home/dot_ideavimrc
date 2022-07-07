@@ -26,7 +26,7 @@ nnoremap <leader>sc :noh<CR>
 nnoremap <leader>gg :action GotoFile<CR>
 nnoremap <leader>gs :action FileStructurePopup<CR>
 set NERDTree
-nnoremap <leader>gf :NERDTree<CR>
+nnoremap <leader>gf :action SelectInProjectView<CR>
 
 " r for refactor
 nnoremap <Leader>rn :action RenameElement<CR>
