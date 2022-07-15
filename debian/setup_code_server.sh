@@ -1,6 +1,11 @@
 #!/bin/sh
 
 echo "install https://code-server.dev"
+echo "install docker"
+if [ -x "$(command -v code-server)" ]; then
+  echo "code-server is already installed, exit."
+  exit 1
+fi
 
 curl -fsSL https://code-server.dev/install.sh | sh
 mkdir -p ~/.config/code-server

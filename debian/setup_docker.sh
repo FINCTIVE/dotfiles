@@ -2,6 +2,10 @@
 # reference: https://docs.docker.com/engine/install/debian/
 
 echo "install docker"
+if [ -x "$(command -v docker)" ]; then
+  echo "docker is already installed, exit."
+  exit 1
+fi
 
 sudo apt-get update
 sudo apt-get install -y ca-certificates curl gnupg lsb-release
