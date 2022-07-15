@@ -20,6 +20,7 @@ EOF
 
 # require: docker
 sudo docker image pull kindest/node
+# todo: fix a k8s version
 
 echo "Launch a cluster:"
 echo "$ kind create cluster --config kind-config.yaml"
