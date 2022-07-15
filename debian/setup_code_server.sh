@@ -1,7 +1,6 @@
 #!/bin/sh
 
 echo "install https://code-server.dev"
-echo "install docker"
 if [ -x "$(command -v code-server)" ]; then
   echo "code-server is already installed, exit."
   exit 1
@@ -20,11 +19,7 @@ auth: password
 password: code-server-password
 EOF
 
-# check systemd
-if command -v systemctl &> /dev/null
-then
-    sudo systemctl enable --now code-server@$USER
-    echo "code-server addr: localhost:4000"
-    echo "password: code-server-password"
-    echo "NOTICE: Change the password!"
-fi
+echo "sudo systemctl enable --now code-server@$USER
+echo "code-server addr: localhost:4000"
+echo "password: code-server-password"
+echo "NOTICE: Change the password!"

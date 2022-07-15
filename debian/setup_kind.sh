@@ -1,6 +1,10 @@
 #!/bin/sh
 
 echo "install kind"
+if [ -x "$(command -v kind)" ]; then
+  echo "kind is already installed, exit."
+  exit 1
+fi
 
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.12.0/kind-linux-amd64
 chmod +x ./kind
