@@ -1,4 +1,7 @@
 #!/bin/sh
+
+echo "install https://code-server.dev"
+
 curl -fsSL https://code-server.dev/install.sh | sh
 mkdir -p ~/.config/code-server
 
