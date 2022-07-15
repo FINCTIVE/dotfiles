@@ -16,8 +16,7 @@ nodes:
 EOF
 
 # require: docker
-kind create cluster --config kind-config.yaml
+docker image pull kindest/node
 
-# exposed to outside
-# fix("0.0.0.0" is not a destination)
-sed -i 's/0.0.0.0/localhost/g' ~/.kube/config
+echo "Launch a cluster:"
+echo "$ kind create cluster --config kind-config.yaml"
