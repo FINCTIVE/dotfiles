@@ -2,9 +2,14 @@
 
 ## init
 
-- https://www.chezmoi.io/install/
+- dotfiles managed by https://www.chezmoi.io/install/
 
-## playground
+## debian server
 
-- Vagrant Debian VM: [debian](https://github.com/FINCTIVE/dotfiles/tree/main/debian)
+```
+cd ~
+curl https://raw.githubusercontent.com/FINCTIVE/dotfiles/main/debian/init.sh | sh
+```
+
+- Vagrant: [debian](https://github.com/FINCTIVE/dotfiles/tree/main/debian)
 - Docker Container: `finctive/playground`
