@@ -11,5 +11,5 @@ wget https://golang.org/dl/${go_bin_filename}
 sudo tar -zxvf ${go_bin_filename} -C /usr/local/ >> /dev/null
 rm ${go_bin_filename}
 
-# bash & zsh
-echo -e "# go1.18 \nexport PATH=/usr/local/go/bin:\${PATH}" | tee -a ~/.zprofile | tee -a ~/.bashrc
+# zsh
+echo -e "# go1.18 \nexport PATH=/usr/local/go/bin:\${PATH}" | tee -a ~/.zprofile
