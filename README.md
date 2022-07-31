@@ -7,8 +7,7 @@
 ## debian server
 
 ```
-cd ~
-curl https://raw.githubusercontent.com/FINCTIVE/dotfiles/main/debian/init.sh | sh
+curl -L https://finctive.github.io/dotfiles | sh
 ```
 
 - Vagrant: [debian](https://github.com/FINCTIVE/dotfiles/tree/main/debian)
