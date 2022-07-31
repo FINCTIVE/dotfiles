@@ -1,6 +1,8 @@
 #!/bin/sh
 echo "init everything: https://github.com/FINCTIVE/dotfiles/tree/main/debian"
 
+cd $HOME
+
 sudo apt-get update
 sudo apt-get install -y curl
 
