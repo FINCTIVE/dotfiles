@@ -26,3 +26,7 @@ merge_kube_configs() {
 
 alias watchkgetpod='watch -n 1 kubectl get pod'
 alias watchkgetall='watch -n 5 kubectl get all'
+
+k_remove_finalizers() {
+	kubectl patch -p '{"metadata":{"finalizers":null}}' --type=merge $1 $2
+}
