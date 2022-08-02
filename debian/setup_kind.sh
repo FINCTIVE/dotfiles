@@ -1,4 +1,11 @@
 #!/bin/sh
+
+echo "install kind"
+if [ -x "$(command -v kind)" ]; then
+  echo "kind is already installed, exit."
+  exit 1
+fi
+
 curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.12.0/kind-linux-amd64
 chmod +x ./kind
 sudo install kind /usr/local/bin/kind && rm ./kind
@@ -16,8 +23,8 @@ nodes:
 EOF
 
 # require: docker
-kind create cluster --config kind-config.yaml
+sudo docker image pull kindest/node
+# todo: fix a k8s version
 
-# exposed to outside
-# fix("0.0.0.0" is not a destination)
-sed -i 's/0.0.0.0/localhost/g' ~/.kube/config
+echo "Launch a cluster:"
+echo "$ kind create cluster --config kind-config.yaml"

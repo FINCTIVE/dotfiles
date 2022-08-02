@@ -1,4 +1,7 @@
 #!/bin/sh
+
+echo "install *cli-tools*"
+
 sudo apt-get update
 sudo apt-get install -y \
   iputils-ping curl wget iputils-ping iproute2 net-tools procps \
