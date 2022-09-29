@@ -28,6 +28,9 @@ nnoremap <leader>gs :action FileStructurePopup<CR>
 set NERDTree
 nnoremap <leader>gf :action SelectInProjectView<CR>
 nnoremap <leader>gt :action Terminal.OpenInTerminal<CR>
+" navigate golang interface
+nnoremap <leader>gi :action GotoImplementation<CR>
+nnoremap <leader>gu :action GotoSuperMethod<CR>
 
 " r for refactor
 nnoremap <Leader>rn :action RenameElement<CR>
