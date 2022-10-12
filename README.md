@@ -10,7 +10,7 @@ curl -L https://finctive.github.io/dotfiles | sh
 
 ### full tool set 
 
-vagrant virtual machine: [debian(x86)](https://github.com/FINCTIVE/dotfiles/tree/main/debian)
+vagrant virtual machine: [debian(amd64)](https://github.com/FINCTIVE/dotfiles/tree/main/debian)
 
 ```
 curl -L https://raw.githubusercontent.com/FINCTIVE/dotfiles/main/debian/init.sh | sh
