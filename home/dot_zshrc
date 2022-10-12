@@ -19,6 +19,7 @@ bindkey '^v' edit-command-line
 
 KUBE_PS1_PREFIX="["
 KUBE_PS1_SUFFIX="]"
+KUBE_PS1_ENABLED=off
 PROMPT='$(kube_ps1)'$PROMPT
 
 merge_kube_configs() {
