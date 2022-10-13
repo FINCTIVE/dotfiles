@@ -1,6 +1,6 @@
 #!/bin/sh
-
 echo "install kind"
+
 if [ -x "$(command -v kind)" ]; then
   echo "kind is already installed, exit."
   exit 1
@@ -22,9 +22,5 @@ nodes:
 - role: worker
 EOF
 
-# require: docker
-sudo docker image pull kindest/node
-# todo: fix a k8s version
-
-echo "Launch a cluster:"
+echo "To launch a cluster:"
 echo "$ kind create cluster --config kind-config.yaml"

@@ -1,1 +1,70 @@
-curl https://raw.githubusercontent.com/FINCTIVE/dotfiles/main/debian/setup_dev.sh | sh
+#!/bin/sh
+echo "🤔💊"
+echo "Github: https://github.com/finctive/dotfiles"
+
+SETUP_BASIC="off"
+read -p "setup basic cli? (y/n, default: no) " RESP
+if [ "$RESP" = "y" ]; then
+  SETUP_BASIC="on"
+fi
+
+SETUP_K8S="off"
+read -p "setup k8s ops tool? (y/n, default: no) " RESP
+if [ "$RESP" = "y" ]; then
+  SETUP_K8S="on"
+fi
+
+SETUP_CODE_SERVER="off"
+read -p "setup code server? (y/n, default: no) " RESP
+if [ "$RESP" = "y" ]; then
+  SETUP_CODE_SERVER="on"
+fi
+
+SETUP_DOCKER="off"
+read -p "setup docker? (y/n, default: no) " RESP
+if [ "$RESP" = "y" ]; then
+  SETUP_DOCKER="on"
+fi
+
+SETUP_KIND="off"
+read -p "setup kind(amd64)? (y/n, default: no) " RESP
+if [ "$RESP" = "y" ]; then
+  SETUP_KIND="on"
+fi
+
+SETUP_GO="off"
+read -p "setup go1.18(amd64)? (y/n, default: no) " RESP
+if [ "$RESP" = "y" ]; then
+  SETUP_GO="on"
+fi
+
+# start installation process
+
+sudo apt-get update
+sudo apt-get install -y curl
+cd $HOME
+GITHUB_DIR_PATH="https://raw.githubusercontent.com/FINCTIVE/dotfiles/main/debian/scripts/"
+
+if [ "$SETUP_BASIC" = "on" ]; then
+  curl ${GITHUB_DIR_PATH}basic.sh | sh
+fi
+
+if [ "$SETUP_K8S" = "on" ]; then
+  curl ${GITHUB_DIR_PATH}k8s_tools.sh | sh
+fi
+
+if [ "$SETUP_CODE_SERVER" = "on" ]; then
+  curl ${GITHUB_DIR_PATH}code_server.sh | sh
+fi
+
+if [ "$SETUP_DOCKER" = "on" ]; then
+  curl ${GITHUB_DIR_PATH}docker.sh | sh
+fi
+
+if [ "$SETUP_KIND" = "on" ]; then
+  curl ${GITHUB_DIR_PATH}kind_amd64.sh | sh
+fi
+
+if [ "$SETUP_GO" = "on" ]; then
+  curl ${GITHUB_DIR_PATH}go1.18_amd64.sh | sh
+fi

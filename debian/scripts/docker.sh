@@ -1,6 +1,5 @@
 #!/bin/sh
 # reference: https://docs.docker.com/engine/install/debian/
-
 echo "install docker"
 if [ -x "$(command -v docker)" ]; then
   echo "docker is already installed, exit."

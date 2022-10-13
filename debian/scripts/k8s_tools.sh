@@ -1,6 +1,6 @@
 #!/bin/sh
+echo "install k8s ops tools"
 
-echo "install k8s-cli-tools"
 sudo apt-get update && sudo apt-get install -y curl git
 
 # kubectl

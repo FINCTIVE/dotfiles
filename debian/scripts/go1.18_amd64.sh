@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "install go 1.18"
 if [ -x "$(command -v go)" ]; then
   echo "go is already installed, exit."

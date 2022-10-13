@@ -1,5 +1,4 @@
 #!/bin/sh
-
 echo "install https://code-server.dev"
 if [ -x "$(command -v code-server)" ]; then
   echo "code-server is already installed, exit."
@@ -19,6 +18,7 @@ auth: password
 password: code-server-password
 EOF
 
+echo "config file: ~/.config/code-server/config.yaml"
 echo "sudo systemctl enable --now code-server@$USER"
 echo "code-server addr: localhost:4000"
 echo "password: code-server-password"

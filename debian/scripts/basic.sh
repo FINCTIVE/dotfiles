@@ -1,6 +1,5 @@
 #!/bin/sh
-
-echo "install *cli-tools*"
+echo "install cli tools"
 
 sudo apt-get update
 sudo apt-get install -y \
