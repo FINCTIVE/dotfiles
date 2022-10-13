@@ -6,8 +6,10 @@
 
 ## init.sh
 
+Debian server
+
 ```
-curl -L "https://finctive.github.io/dotfiles"
+sh <(curl -L "https://finctive.github.io/dotfiles")
 ```
 
 ## Docker Image
