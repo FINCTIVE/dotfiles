@@ -4,6 +4,7 @@
 
 - [x] ARM support for [k8s tools setup scripts](https://github.com/FINCTIVE/dotfiles/blob/main/debian/setup_k8s_tools.sh)
 - [x] ARM support for Docker container
+- [ ] interactive init.sh; update index.html
 
 ## full tool set 
 
