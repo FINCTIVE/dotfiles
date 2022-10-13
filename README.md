@@ -26,5 +26,5 @@ curl -L https://raw.githubusercontent.com/FINCTIVE/dotfiles/main/debian/init.sh 
 
 ## TODO
 
-- [ ] ARM support for [k8s tools setup scripts](https://github.com/FINCTIVE/dotfiles/blob/main/debian/setup_k8s_tools.sh)
+- [x] ARM support for [k8s tools setup scripts](https://github.com/FINCTIVE/dotfiles/blob/main/debian/setup_k8s_tools.sh)
 - [ ] ARM support for Docker container
