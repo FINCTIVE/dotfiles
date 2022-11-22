@@ -17,6 +17,7 @@ case $ARCH in
   x86_64) ARCH="linux-amd64";;
 esac
 wget https://github.com/sbstp/kubie/releases/download/v0.19.1/kubie-${ARCH}
+chmod +x kubie-${ARCH}
 sudo mv kubie-${ARCH} /usr/local/bin/kubie
 
 sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
