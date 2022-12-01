@@ -10,7 +10,7 @@ echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https:/
 sudo apt-get update
 sudo apt-get install -y kubectl
 
-# kubectx
+# kubie
 ARCH=$(uname -m)
 case $ARCH in
   aarch64) ARCH="linux-arm64";;
@@ -19,10 +19,6 @@ esac
 wget https://github.com/sbstp/kubie/releases/download/v0.19.1/kubie-${ARCH}
 chmod +x kubie-${ARCH}
 sudo mv kubie-${ARCH} /usr/local/bin/kubie
-
-sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
-sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
-sudo ln -s /opt/kubectx/kubens /usr/local/bin/kubens
 
 # helm
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
