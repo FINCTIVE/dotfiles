@@ -43,7 +43,7 @@ rm -r popeye
 ARCH=$(uname -m)
 case $ARCH in
   aarch64) ARCH="arm64";;
-  x86_64) ARCH="x86_64";;
+  x86_64) ARCH="amd64";;
 esac
 wget https://github.com/stern/stern/releases/download/v1.22.0/stern_1.22.0_linux_${ARCH}.tar.gz
 mkdir stern
