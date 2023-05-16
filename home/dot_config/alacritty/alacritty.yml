@@ -9,7 +9,12 @@ window:
 font:
   size: 15
 
+bell:
+  duration: 0 # disable
+
 # https://github.com/alacritty/alacritty-theme
 import:
  - ~/.config/alacritty/themes/themes/nord.yaml
+ # - ~/.config/alacritty/themes/themes/gruvbox_material.yaml
+ # - ~/.config/alacritty/themes/themes/github_light.yaml
  # - ~/.config/alacritty/themes/themes/ayu_light.yaml
