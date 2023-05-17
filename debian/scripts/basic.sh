@@ -13,7 +13,7 @@ sudo apt-get install -y \
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/Aloxaf/fzf-tab ~/.oh-my-zsh/custom/plugins/fzf-tab
-curl -sS https://starship.rs/install.sh | sh
+curl -sSL https://starship.rs/install.sh | sh -s -- --yes
 
 # dotfiles
 sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply FINCTIVE
