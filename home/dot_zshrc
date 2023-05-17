@@ -10,7 +10,6 @@ source $ZSH/oh-my-zsh.sh
 # prompt
 eval "$(starship init zsh)"
 
-
 # custom configs
 export EDITOR=vim
 bindkey '^v' edit-command-line
