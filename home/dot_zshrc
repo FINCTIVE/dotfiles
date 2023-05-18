@@ -3,16 +3,22 @@ export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode reminder
 zstyle ':omz:update' frequency 90
 
-plugins=(git zsh-autosuggestions fzf fzf-tab autojump kubectl)
+plugins=(git zsh-autosuggestions fzf fzf-tab kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
 # prompt
 eval "$(starship init zsh)"
 
+# z 
+eval "$(zoxide init zsh)"
+
 # custom configs
-export EDITOR=vim
 bindkey '^v' edit-command-line
+
+# editor
+export EDITOR=vim
+which nvim >/dev/null 2>&1 && export EDITOR=nvim
 
 # alias
 v(){
@@ -20,8 +26,16 @@ v(){
 	goland $1
 }
 
-r(){
-	ranger --choosedir=$HOME/.rangerdir
-	LASTDIR=`cat $HOME/.rangerdir`
-	cd "$LASTDIR"
+r (){
+    [ "${NNNLVL:-0}" -eq 0 ] || {
+        echo "nnn is already running"
+        return
+    }
+    export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+    command nnn -eC "$@"
+
+    [ ! -f "$NNN_TMPFILE" ] || {
+        . "$NNN_TMPFILE"
+        rm -f "$NNN_TMPFILE" > /dev/null
+    }
 }
