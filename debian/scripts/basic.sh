@@ -6,10 +6,12 @@ sudo apt-get install -y \
   iputils-ping curl wget iputils-ping iproute2 net-tools procps \
   git make
 sudo apt-get install -y \
-  zsh autojump ranger fzf silversearcher-ag vim \
-  tmux htop ncdu nload jq
+  tmux zsh vim \
+  zoxide nnn fzf \
+  jq silversearcher-ag \
+  htop ncdu nload
 
-# oh-my-zsh
+# zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/Aloxaf/fzf-tab ~/.oh-my-zsh/custom/plugins/fzf-tab

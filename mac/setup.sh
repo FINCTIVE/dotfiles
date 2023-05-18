@@ -1,6 +1,10 @@
 # install brew
 
 # install
-brew install watch tmux htop ncdu nload tree jq chezmoi fzf autojump nnn the_silver_searcher tldr starship
+brew install chezmoi tmux fzf nnn zoxide starship 
+
+brew install htop ncdu nload jq the_silver_searcher tldr
+
+brew install watch tree
 
 brew install kubectl kubie helm stern derailed/popeye/popeye istioctl kind 
