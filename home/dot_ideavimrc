@@ -1,50 +1,40 @@
-" using system clipboard
+" copy to system clipboard
 set clipboard=unnamedplus
 set clipboard+=ideaput
 " no sound
 set visualbell
+" plugins
+set NERDTree
+
+" NOTE: To find IDE Action name, enable "Track Action Ids"
 
 nnoremap <C-P> :action NextTab<CR>
 nnoremap <C-N> :action PreviousTab<CR>
 
-nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
-nnoremap <leader>x :action ChooseRunConfiguration<CR>
 nnoremap <leader>f :action ReformatCode<CR>
-
-" s for search
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-nnoremap <leader>sr :action Replace<CR>
-nnoremap <leader>se :action SearchEverywhere<CR>
-nnoremap <leader>ss :action FindInPath<CR>
-" clean * highlight
-nnoremap <leader>sc :noh<CR>
+nnoremap <leader>x :action RunClass<CR>
 
 " g for go, moving
+nnoremap <leader>gf :action SelectInProjectView<CR>
 nnoremap <leader>gg :action GotoFile<CR>
 nnoremap <leader>gs :action FileStructurePopup<CR>
-set NERDTree
-nnoremap <leader>gf :action SelectInProjectView<CR>
 nnoremap <leader>gt :action Terminal.OpenInTerminal<CR>
-" navigate golang interface
 nnoremap <leader>gi :action GotoImplementation<CR>
 nnoremap <leader>gu :action GotoSuperMethod<CR>
+nnoremap <leader>gx :action ChooseRunConfiguration<CR>
 
 " r for refactor
 nnoremap <Leader>rn :action RenameElement<CR>
 nnoremap <leader>ru :action FindUsages<CR>
 
 " e for error
-nnoremap <leader>ee :action ShowIntentionActions<CR>
-nnoremap <leader>er :action ActivateProblemsViewToolWindow<CR>
 nnoremap <leader>en :action GotoNextError<CR>
 nnoremap <leader>eN :action GotoPreviousError<CR>
+nnoremap <leader>ee :action ShowIntentionActions<CR>
+nnoremap <leader>et :action ActivateProblemsViewToolWindow<CR>
 
 " v for view
+nnoremap <leader>vt :action ChangeLaf<CR>
 nnoremap <leader>vz :action ToggleZenMode<CR>
 nnoremap <leader>vf :action ToggleFullScreen<CR>
-nnoremap <leader>vs :action ShowSettings<CR>
-" reload Config file
 nnoremap <leader>vr :source ~/.ideavimrc
