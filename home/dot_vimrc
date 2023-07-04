@@ -2,5 +2,4 @@ syntax on             " Enables syntax highlighting in Vim
 set tabstop=4         " Sets the width of a tab to 4 spaces
 set hlsearch          " Highlights all instances of a searched term
 set number            " Displays line numbers in the gutter
-set relativenumber    " Displays relative line numbers in the gutter
 set clipboard=unnamed " Allows Vim to access the system clipboard
