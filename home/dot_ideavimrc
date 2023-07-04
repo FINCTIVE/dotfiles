@@ -13,6 +13,7 @@ nnoremap <C-N> :action PreviousTab<CR>
 
 nnoremap <leader>f :action ReformatCode<CR>
 nnoremap <leader>x :action RunClass<CR>
+nnoremap <leader>d :action DebugClass<CR>
 
 " g for go, moving
 nnoremap <leader>gf :action SelectInProjectView<CR>
