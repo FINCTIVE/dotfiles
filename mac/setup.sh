@@ -7,4 +7,6 @@ brew install htop ncdu nload jq the_silver_searcher tldr
 
 brew install watch tree
 
-brew install kubectl kubie helm stern derailed/popeye/popeye istioctl kind 
+brew install kubectl kubie helm stern 
+
+brew install istioctl kind 

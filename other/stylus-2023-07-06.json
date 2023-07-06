@@ -1,0 +1,136 @@
+[
+  {
+    "settings": {
+      "openEditInWindow": false,
+      "openEditInWindow.popup": false,
+      "windowPosition": {},
+      "show-badge": true,
+      "disableAll": false,
+      "exposeIframes": false,
+      "exposeStyleName": false,
+      "newStyleAsUsercss": false,
+      "styleViaXhr": false,
+      "patchCsp": false,
+      "urlInstaller": true,
+      "config.autosave": true,
+      "schemeSwitcher.enabled": "system",
+      "schemeSwitcher.nightStart": "18:00",
+      "schemeSwitcher.nightEnd": "06:00",
+      "popup.breadcrumbs": true,
+      "popup.breadcrumbs.usePath": false,
+      "popup.enabledFirst": true,
+      "popup.stylesFirst": true,
+      "popup.autoResort": false,
+      "popup.borders": false,
+      "popup.findSort": "u",
+      "manage.onlyEnabled": false,
+      "manage.onlyLocal": false,
+      "manage.onlyUsercss": false,
+      "manage.onlyEnabled.invert": false,
+      "manage.onlyLocal.invert": false,
+      "manage.onlyUsercss.invert": false,
+      "manage.actions.expanded": true,
+      "manage.backup.expanded": true,
+      "manage.filters.expanded": true,
+      "manage.minColumnWidth": 750,
+      "manage.newUI": true,
+      "manage.newUI.favicons": false,
+      "manage.newUI.faviconsGray": true,
+      "manage.newUI.targets": 3,
+      "manage.newUI.sort": "title,asc",
+      "editor.options": {},
+      "editor.toc.expanded": true,
+      "editor.options.expanded": true,
+      "editor.lint.expanded": true,
+      "editor.publish.expanded": true,
+      "editor.lineWrapping": true,
+      "editor.smartIndent": true,
+      "editor.indentWithTabs": false,
+      "editor.tabSize": 4,
+      "editor.keyMap": "default",
+      "editor.theme": "default",
+      "editor.beautify": {
+        "selector_separator_newline": true,
+        "newline_before_open_brace": false,
+        "newline_after_open_brace": true,
+        "newline_between_properties": true,
+        "newline_before_close_brace": true,
+        "newline_between_rules": false,
+        "preserve_newlines": true,
+        "end_with_newline": false,
+        "indent_conditional": true,
+        "indent_mozdoc": true,
+        "space_around_combinator": true,
+        "space_around_cmp": false
+      },
+      "editor.beautify.hotkey": "",
+      "editor.lintDelay": 300,
+      "editor.linter": "csslint",
+      "editor.lintReportDelay": 500,
+      "editor.matchHighlight": "token",
+      "editor.autoCloseBrackets": true,
+      "editor.autocompleteOnTyping": false,
+      "editor.contextDelete": false,
+      "editor.selectByTokens": true,
+      "editor.arrowKeysTraverse": true,
+      "editor.appliesToLineWidget": true,
+      "editor.autosaveDraft": 10,
+      "editor.livePreview": true,
+      "editor.colorpicker": true,
+      "editor.colorpicker.hexUppercase": false,
+      "editor.colorpicker.hotkey": "",
+      "editor.colorpicker.color": "",
+      "editor.colorpicker.maxHeight": 300,
+      "hotkey._execute_browser_action": "",
+      "hotkey.openManage": "",
+      "hotkey.styleDisableAll": "",
+      "sync.enabled": "none",
+      "iconset": -1,
+      "badgeDisabled": "#8B0000",
+      "badgeNormal": "#006666",
+      "headerWidth.edit": 494,
+      "headerWidth.install": 494,
+      "headerWidth.manage": 494,
+      "popupWidth": 246,
+      "updateInterval": 24
+    },
+    "order": {
+      "main": [],
+      "prio": []
+    }
+  },
+  {
+    "enabled": true,
+    "installDate": 1688610049819,
+    "name": "Poe - Minimal Article Style",
+    "sections": [
+      {
+        "code": "/* hide sidebar */\n.PageWithSidebarLayout_leftSidebar__Y6XQo {\n    display: none !important\n}\n\n/* hide title */\n.PageWithSidebarLayout_headerWrapper__V_ep_ {\n    display: none !important\n}\n\n/* hide feedback */\n.ChatMessageFeedbackButtons_feedbackButtonsContainer__0Xd3I {\n    display: none !important\n}\n/* hide suggestion */\n.ChatMessageSuggestedReplies_suggestedRepliesContainer__JgW12 {\n    display: none !important\n}\n\n/* chat area width */\n.PageWithSidebarLayout_mainSection__i1yOg {\n    max-width: none !important;\n    width: 70% !important;\n}\n\n/* bot message */\n.Message_botMessageBubble__CPGMI {\n    /*font-size: 15px;*/\n    max-width: 70vw !important;\n    background: white !important;\n}\n\n/* human message */\n.Message_humanMessageBubble__Nld4j {\n    max-width: 70vw !important;\n    justify-content: flex-start !important;\n    margin-left: 0 !important;\n    background: white !important;\n    color: black !important;\n\n    border-left: 2px solid #4484e3 !important;\n    border-radius: 0px !important;\n}\n\n.Message_humanMessageBubble__Nld4j::before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: -10px;\n    /* Adjust the left value to change the position of the line */\n    bottom: 0;\n    width: 3px;\n    /* Adjust the width value to change the thickness of the line */\n    background-color: #0077cc;\n    /* Change the color of the line */\n}\n\n\n.ChatMessage_messageWrapper__Zf87D.ChatMessage_humanMessageWrapper__76ZSo {\n    justify-content: flex-start !important;\n}\n\n/* hide chat button */\n.ChatMessage_messageOverflowButton__8a84V {\n    display: none !important;\n}\n\n/* footer */\n.ChatMessagesView_messagePair__CsQMW:last-of-type {\n    min-height: 0px !important;\n}\n.ChatPageMainFooter_footer__Hm4Rt {\n    position: static !important;\n}",
+        "domains": [
+          "poe.com"
+        ]
+      }
+    ],
+    "updateDate": 1688610223371,
+    "_id": "6c3e955c-deab-4b1d-9cf1-db287738c343",
+    "_rev": 1688611963998,
+    "id": 1
+  },
+  {
+    "enabled": true,
+    "installDate": 1688610101124,
+    "name": "Hacker News - Readable Plain Text",
+    "sections": [
+      {
+        "code": "code {\n    max-width: 500px !important;\n    overflow: scroll !important;\n}\n\ntbody,\ntr,\ntd,\ntable {\n    max-width: 720px !important;\n}\n\na:hover {\n    text-decoration: underline !important;\n}\n\n\n/* remove all background color*/\n#hnmain {\n    background: none !important;\n}\ntd {\n    background: none !important;\n}\n\n/* plain text title*/\nimg {\n    display: none !important;\n}\n.hnname {\n    font-weight: normal !important;\n}",
+        "domains": [
+          "news.ycombinator.com"
+        ]
+      }
+    ],
+    "updateDate": 1688610157837,
+    "_id": "1202cb5e-e55f-4785-8bdc-51e796ae98c4",
+    "_rev": 1688610157837,
+    "id": 2
+  }
+]
