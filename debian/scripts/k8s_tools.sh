@@ -26,19 +26,6 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 rm ./get_helm.sh
 
-# popeye
-ARCH=$(uname -m)
-case $ARCH in
-  aarch64) ARCH="arm64";;
-  x86_64) ARCH="x86_64";;
-esac
-wget https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Linux_${ARCH}.tar.gz  
-mkdir popeye
-tar xf popeye_Linux_${ARCH}.tar.gz --directory=popeye
-rm popeye_Linux_${ARCH}.tar.gz
-sudo mv popeye/popeye /usr/local/bin/popeye
-rm -r popeye
-
 # stern
 ARCH=$(uname -m)
 case $ARCH in
