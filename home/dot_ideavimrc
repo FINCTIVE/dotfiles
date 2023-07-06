@@ -5,6 +5,8 @@ set clipboard+=ideaput
 set visualbell
 " plugins
 set NERDTree
+" highlight search
+set hlsearch
 
 " NOTE: To find IDE Action name, enable "Track Action Ids"
 
