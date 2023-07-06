@@ -33,6 +33,7 @@ nnoremap <leader>en :action GotoNextError<CR>
 nnoremap <leader>eN :action GotoPreviousError<CR>
 nnoremap <leader>ee :action ShowIntentionActions<CR>
 nnoremap <leader>et :action ActivateProblemsViewToolWindow<CR>
+nnoremap <leader>ei :action InspectCode<CR>
 
 " v for view
 nnoremap <leader>vt :action ChangeLaf<CR>
