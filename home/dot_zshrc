@@ -18,12 +18,11 @@ bindkey '^v' edit-command-line
 
 # editor
 export EDITOR=vim
-which nvim >/dev/null 2>&1 && export EDITOR=nvim
 
 # alias
 v(){
-	cat - > $1
-	goland $1
+  cat - > $1
+  goland $1
 }
 
 r (){
@@ -32,7 +31,7 @@ r (){
         return
     }
     export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-    command nnn -eC "$@"
+    command nnn -eEC "$@"
 
     [ ! -f "$NNN_TMPFILE" ] || {
         . "$NNN_TMPFILE"
