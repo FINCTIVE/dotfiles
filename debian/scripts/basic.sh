@@ -3,7 +3,7 @@ echo "install cli tools"
 
 sudo apt-get update
 sudo apt-get install -y \
-  iputils-ping curl wget iputils-ping iproute2 net-tools procps \
+  iputils-ping curl wget iproute2 net-tools procps tcpdump \
   git make
 sudo apt-get install -y \
   tmux zsh vim \
