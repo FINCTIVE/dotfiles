@@ -3,7 +3,7 @@ echo "install cli tools"
 
 sudo apt-get update
 sudo apt-get install -y \
-  procps lsof \
+  sudo procps lsof \
   iproute2 net-tools iputils-ping curl wget tcpdump \
   git make \
   htop ncdu nload \
