@@ -2,7 +2,7 @@ FROM debian:latest
 
 WORKDIR /setup-scripts
 COPY ./scripts/*.sh  .
-RUN apt-get update && sh basic.sh && sh k8s_tools.sh
+RUN apt-get update && apt-get install -y sudo && sh basic.sh && sh k8s_tools.sh
 
 WORKDIR /
 EXPOSE 8080
