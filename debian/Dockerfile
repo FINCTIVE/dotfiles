@@ -1,17 +1,10 @@
-FROM debian:bullseye
+FROM debian:latest
 
-WORKDIR /setup
-COPY ./scripts/*.sh  ./
+WORKDIR /workspace
+COPY ./scripts/*.sh  ./scripts
 RUN apt-get update && apt-get install -y sudo \
   && sh basic.sh \
-  && sh k8s_tools.sh \
-  && curl -fsSL https://code-server.dev/install.sh | sh \
-  && mkdir -p ~/.config/code-server \
-  && cat <<EOF > ~/.config/code-server/config.yaml
-bind-addr: 0.0.0.0:8080
-cert: false
-auth: none
-EOF
+  && sh k8s_tools.sh
 
 EXPOSE 8080
-CMD ["code-server"]
+CMD ["sh", "-c", "while true; do nc -l 8080; done"]

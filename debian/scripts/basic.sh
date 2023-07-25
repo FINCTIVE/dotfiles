@@ -3,13 +3,12 @@ echo "install cli tools"
 
 sudo apt-get update
 sudo apt-get install -y \
-  iputils-ping curl wget iproute2 net-tools procps tcpdump \
-  git make
-sudo apt-get install -y \
+  procps lsof \
+  iproute2 net-tools iputils-ping curl wget tcpdump \
+  git make \
+  htop ncdu nload \
   tmux zsh vim \
-  zoxide nnn fzf \
-  jq silversearcher-ag \
-  htop ncdu nload
+  zoxide nnn fzf jq silversearcher-ag
 
 # zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
