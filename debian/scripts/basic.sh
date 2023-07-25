@@ -4,7 +4,7 @@ echo "install cli tools"
 sudo apt-get update
 sudo apt-get install -y \
   procps lsof \
-  iproute2 net-tools iputils-ping curl wget tcpdump \
+  iproute2 net-tools iputils-ping curl wget tcpdump netcat-openbsd\
   git make \
   htop ncdu nload \
   tmux zsh vim \
