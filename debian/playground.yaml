@@ -1,0 +1,47 @@
+# https://github.com/FINCTIVE/dotfiles
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: playground
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playground
+  namespace: playground
+spec:
+  selector:
+    matchLabels:
+      app: playground
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: playground
+    spec:
+      serviceAccountName: playground-sa
+      containers:
+        - name: playground
+          image: finctive/playground
+          ports:
+            - containerPort: 8080
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: playground-sa
+  namespace: playground
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: playground-cluster-admin
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+  - kind: ServiceAccount
+    name: playground-sa
+    namespace: playground
