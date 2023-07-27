@@ -19,7 +19,7 @@ eval "$(zoxide init zsh)"
 bindkey '^v' edit-command-line
 
 # editor
-export EDITOR=vim
+export EDITOR=nvim
 
 # alias
 alias k=kubectl
