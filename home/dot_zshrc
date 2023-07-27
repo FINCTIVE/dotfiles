@@ -1,3 +1,5 @@
+export LANG=en_US.UTF-8
+
 # oh my zsh settings
 export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode reminder
@@ -21,6 +23,7 @@ export EDITOR=vim
 
 # alias
 alias k=kubectl
+alias vim=nvim
 
 v(){
   cat - > $1

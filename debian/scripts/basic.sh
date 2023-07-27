@@ -7,7 +7,7 @@ sudo apt-get install -y \
   iproute2 net-tools iputils-ping curl wget netcat-openbsd tcpdump tshark \
   git make \
   htop ncdu nload \
-  tmux zsh vim \
+  tmux zsh neovim \
   zoxide nnn fzf jq silversearcher-ag
 
 # zsh
