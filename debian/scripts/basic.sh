@@ -3,7 +3,7 @@ echo "install cli tools"
 
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
-  procps lsof \
+  procps lsof ca-certificates \
   iproute2 net-tools iputils-ping curl wget netcat-openbsd tcpdump \
   git make \
   htop ncdu nload termshark \
