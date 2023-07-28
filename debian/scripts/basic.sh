@@ -4,9 +4,9 @@ echo "install cli tools"
 sudo apt-get update
 sudo apt-get install -y \
   procps lsof \
-  iproute2 net-tools iputils-ping curl wget netcat-openbsd tcpdump tshark \
+  iproute2 net-tools iputils-ping curl wget netcat-openbsd tcpdump \
   git make \
-  htop ncdu nload \
+  htop ncdu nload termshark \
   tmux zsh neovim \
   zoxide nnn fzf jq silversearcher-ag
 
