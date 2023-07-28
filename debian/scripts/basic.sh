@@ -2,7 +2,7 @@
 echo "install cli tools"
 
 sudo apt-get update
-sudo apt-get install -y \
+sudo apt-get install -y --no-install-recommends \
   procps lsof \
   iproute2 net-tools iputils-ping curl wget netcat-openbsd tcpdump \
   git make \
