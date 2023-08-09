@@ -37,8 +37,8 @@ nnoremap <leader>ee :action ShowIntentionActions<CR>
 nnoremap <leader>et :action ActivateProblemsViewToolWindow<CR>
 nnoremap <leader>ei :action InspectCode<CR>
 
+
 " v for view
 nnoremap <leader>vt :action ChangeLaf<CR>
-nnoremap <leader>vz :action ToggleZenMode<CR>
-nnoremap <leader>vf :action ToggleFullScreen<CR>
+nnoremap <leader>vh :action Vcs.ShowTabbedFileHistory<CR>
 nnoremap <leader>vr :source ~/.ideavimrc

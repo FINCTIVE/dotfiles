@@ -24,21 +24,27 @@ export EDITOR=nvim
 # alias
 alias vim=nvim
 
-v(){
-  cat - > $1
-  goland $1
+r() {
+  [ "${NNNLVL:-0}" -eq 0 ] || {
+    echo "nnn is already running"
+    return
+  }
+  export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+  command nnn -eEC "$@"
+
+  [ ! -f "$NNN_TMPFILE" ] || {
+    . "$NNN_TMPFILE"
+    rm -f "$NNN_TMPFILE" > /dev/null
+  }
 }
 
-r(){
-    [ "${NNNLVL:-0}" -eq 0 ] || {
-        echo "nnn is already running"
-        return
-    }
-    export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
-    command nnn -eEC "$@"
+view-yaml() {
+  TMP_FILE="/tmp/v-yaml.yaml"
+  cat - > $TMP_FILE
+  nvim $TMP_FILE
+  rm $TMP_FILE
+}
 
-    [ ! -f "$NNN_TMPFILE" ] || {
-        . "$NNN_TMPFILE"
-        rm -f "$NNN_TMPFILE" > /dev/null
-    }
+copy-git-branch-name() {
+  git symbolic-ref --short HEAD | awk '{printf "%s", $0}' | pbcopy
 }
