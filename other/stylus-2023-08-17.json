@@ -1,7 +1,7 @@
 [
   {
     "settings": {
-      "openEditInWindow": false,
+      "openEditInWindow": true,
       "openEditInWindow.popup": false,
       "windowPosition": {},
       "show-badge": true,
@@ -105,15 +105,15 @@
     "name": "Poe - Minimal Article Style",
     "sections": [
       {
-        "code": "/* hide sidebar */\n.PageWithSidebarLayout_leftSidebar__Y6XQo {\n    display: none !important\n}\n\n/* hide title */\n.PageWithSidebarLayout_headerWrapper__V_ep_ {\n    display: none !important\n}\n\n/* hide feedback */\n.ChatMessageFeedbackButtons_feedbackButtonsContainer__0Xd3I {\n    display: none !important\n}\n/* hide suggestion */\n.ChatMessageSuggestedReplies_suggestedRepliesContainer__JgW12 {\n    display: none !important\n}\n\n/* chat area width */\n.PageWithSidebarLayout_mainSection__i1yOg {\n    max-width: none !important;\n    width: 70% !important;\n}\n\n/* bot message */\n.Message_botMessageBubble__CPGMI {\n    /*font-size: 15px;*/\n    max-width: 70vw !important;\n    background: white !important;\n}\n\n/* human message */\n.Message_humanMessageBubble__Nld4j {\n    max-width: 70vw !important;\n    justify-content: flex-start !important;\n    margin-left: 0 !important;\n    background: white !important;\n    color: black !important;\n\n    border-left: 2px solid #4484e3 !important;\n    border-radius: 0px !important;\n}\n\n.Message_humanMessageBubble__Nld4j::before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: -10px;\n    /* Adjust the left value to change the position of the line */\n    bottom: 0;\n    width: 3px;\n    /* Adjust the width value to change the thickness of the line */\n    background-color: #0077cc;\n    /* Change the color of the line */\n}\n\n\n.ChatMessage_messageWrapper__Zf87D.ChatMessage_humanMessageWrapper__76ZSo {\n    justify-content: flex-start !important;\n}\n\n/* hide chat button */\n.ChatMessage_messageOverflowButton__8a84V {\n    display: none !important;\n}\n\n/* footer */\n.ChatMessagesView_messagePair__CsQMW:last-of-type {\n    min-height: 0px !important;\n}\n.ChatPageMainFooter_footer__Hm4Rt {\n    position: static !important;\n}",
+        "code": "/* hide sidebar */\n.ChatPageLeftSidebar_sidebarContainer__u3kjv {\n    display: none !important\n}\n/* hide bot details */\n.SidebarLayout_sidebar__X_iwf {\n    display: none !important\n}\n\n/* hide title */\n.HeaderBar_header__jn5ju {\n    display: none !important\n}\n.PageWithSidebarLayout_headerWrapper__V_ep_ {\n    display: none !important\n}\n.BotInfoCard_sectionContainer__ag99t {\n    display: none !important\n}\n\n/* hide feedback */\n.ChatMessageFeedbackButtons_feedbackButtonsContainer__0Xd3I {\n    display: none !important\n}\n/* hide suggestion */\n.ChatMessageSuggestedReplies_suggestedRepliesContainer__JgW12 {\n    display: none !important\n}\n\n/* chat area width */\n.PageWithSidebarLayout_mainSection__i1yOg {\n    max-width: none !important;\n    width: 90% !important;\n}\n\n/* bot message */\n.Message_botMessageBubble__CPGMI {\n    max-width: 80vw !important;\n    background: white !important;\n}\n/* hide bot avatar */\n.ChatMessage_botMessageHeader__6BlWw {\n    display: none !important\n}\n\n/* human message */\n.Message_humanMessageBubble__Nld4j {\n    max-width: 80vw !important;\n    justify-content: flex-start !important;\n    margin-left: 0 !important;\n    background: white !important;\n    color: black !important;\n\n    border-left: 2px solid #4484e3 !important;\n    border-radius: 0px !important;\n}\n\n.Message_humanMessageBubble__Nld4j::before {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: -10px;\n    /* Adjust the left value to change the position of the line */\n    bottom: 0;\n    width: 3px;\n    /* Adjust the width value to change the thickness of the line */\n    background-color: #0077cc;\n    /* Change the color of the line */\n}\n\n\n.ChatMessage_messageWrapper__Zf87D.ChatMessage_humanMessageWrapper__76ZSo {\n    justify-content: flex-start !important;\n}\n\n/* hide chat button */\n.ChatMessage_messageOverflowButton__8a84V {\n    display: none !important;\n}\n\n/* footer */\n.ChatMessagesView_messagePair__CsQMW:last-of-type {\n    min-height: 0px !important;\n}\n.ChatPageMainFooter_footer__Hm4Rt {\n    position: static !important;\n}",
         "domains": [
           "poe.com"
         ]
       }
     ],
-    "updateDate": 1688610223371,
+    "updateDate": 1692248860038,
     "_id": "6c3e955c-deab-4b1d-9cf1-db287738c343",
-    "_rev": 1688611963998,
+    "_rev": 1692248860038,
     "id": 1
   },
   {
@@ -130,7 +130,7 @@
     ],
     "updateDate": 1688610157837,
     "_id": "1202cb5e-e55f-4785-8bdc-51e796ae98c4",
-    "_rev": 1688610157837,
+    "_rev": 1689656615451,
     "id": 2
   }
 ]
