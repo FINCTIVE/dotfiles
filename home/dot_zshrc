@@ -38,7 +38,7 @@ r() {
   }
 }
 
-view-yaml() {
+vy() {
   TMP_FILE="/tmp/v-yaml.yaml"
   cat - > $TMP_FILE
   nvim $TMP_FILE

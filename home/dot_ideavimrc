@@ -21,7 +21,9 @@ nnoremap <leader>d :action DebugClass<CR>
 nnoremap <leader>gf :action SelectInProjectView<CR>
 nnoremap <leader>gg :action GotoFile<CR>
 nnoremap <leader>gs :action FileStructurePopup<CR>
-nnoremap <leader>gt :action Terminal.OpenInTerminal<CR>
+"nnoremap <leader>gt :action Terminal.OpenInTerminal<CR>
+nnoremap <leader>gt :action Tool_External Tools_iterm<CR>
+
 nnoremap <leader>gi :action GotoImplementation<CR>
 nnoremap <leader>gu :action GotoSuperMethod<CR>
 nnoremap <leader>gx :action ChooseRunConfiguration<CR>
@@ -36,7 +38,6 @@ nnoremap <leader>eN :action GotoPreviousError<CR>
 nnoremap <leader>ee :action ShowIntentionActions<CR>
 nnoremap <leader>et :action ActivateProblemsViewToolWindow<CR>
 nnoremap <leader>ei :action InspectCode<CR>
-
 
 " v for view
 nnoremap <leader>vt :action ChangeLaf<CR>
