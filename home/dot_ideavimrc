@@ -26,10 +26,8 @@ nnoremap <leader>gi :action GotoImplementation<CR>
 nnoremap <leader>gu :action GotoSuperMethod<CR>
 
 " t => terminal
-" nnoremap <leader>tp :action ActivateTerminalToolWindow<CR>
-nnoremap <leader>tp :action Tool_External Tools_iterm-project-dir<CR>
-" nnoremap <leader>tt :action Terminal.OpenInTerminal<CR>
-nnoremap <leader>tt :action Tool_External Tools_iterm-file-dir<CR>
+nnoremap <leader>tp :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>tt :action Terminal.OpenInTerminal<CR>
 
 " r => refactor
 nnoremap <Leader>rn :action RenameElement<CR>

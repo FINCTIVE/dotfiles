@@ -19,11 +19,14 @@ eval "$(zoxide init zsh)"
 bindkey '^v' edit-command-line
 
 # editor
-export EDITOR=nvim
+if command -v vim &> /dev/null
+then
+  export EDITOR=vim
+else
+  export EDITOR=nvim
+fi
 
 # alias
-alias vim=nvim
-
 r() {
   [ "${NNNLVL:-0}" -eq 0 ] || {
     echo "nnn is already running"
