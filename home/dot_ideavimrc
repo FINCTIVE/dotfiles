@@ -5,7 +5,8 @@ set clipboard+=ideaput
 set visualbell
 " plugins
 set NERDTree
-" highlight search
+" search
+set smartcase
 set hlsearch
 
 " NOTE: To find IDE Action name, enable "IdeaVim: Track Action Ids"
