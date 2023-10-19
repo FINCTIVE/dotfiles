@@ -9,14 +9,16 @@ set NERDTree
 set smartcase
 set hlsearch
 
-" NOTE: To find IDE Action name, enable "IdeaVim: Track Action Ids"
-
 nnoremap <C-P> :action NextTab<CR>
 nnoremap <C-N> :action PreviousTab<CR>
 
 nnoremap <leader>f :action ReformatCode<CR>
-nnoremap <leader>x :action RunClass<CR>
-nnoremap <leader>d :action DebugClass<CR>
+
+" x => execute
+nnoremap <leader>xx :action RunClass<CR>
+nnoremap <leader>xc :action RunCoverage<CR>
+nnoremap <leader>xd :action DebugClass<CR>
+nnoremap <leader>xp :action ToggleLineBreakpoint<CR>
 
 " g => go
 nnoremap <leader>gf :action SelectInProjectView<CR>
