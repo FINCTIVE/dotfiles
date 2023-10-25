@@ -12,6 +12,7 @@ set hlsearch
 nnoremap <C-P> :action NextTab<CR>
 nnoremap <C-N> :action PreviousTab<CR>
 
+nnoremap / :action Replace<CR>
 nnoremap <leader>f :action ReformatCode<CR>
 
 " x => execute
@@ -19,6 +20,13 @@ nnoremap <leader>xx :action RunClass<CR>
 nnoremap <leader>xc :action RunCoverage<CR>
 nnoremap <leader>xd :action DebugClass<CR>
 nnoremap <leader>xp :action ToggleLineBreakpoint<CR>
+
+" d => debugger
+nnoremap <leader>dq :action Stop<CR>
+nnoremap <leader>df :action StepOver<CR>
+nnoremap <leader>dr :action Resume<CR>
+nnoremap <leader>dj :action StepInto<CR>
+nnoremap <leader>dk :action StepOut<CR>
 
 " g => go
 nnoremap <leader>gf :action SelectInProjectView<CR>
