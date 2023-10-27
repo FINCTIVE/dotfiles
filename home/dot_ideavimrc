@@ -54,5 +54,8 @@ nnoremap <leader>ei :action InspectCode<CR>
 " v => view
 nnoremap <leader>vt :action ChangeLaf<CR>
 nnoremap <leader>vh :action Vcs.ShowTabbedFileHistory<CR>
-nnoremap <leader>vr :source ~/.ideavimrc
 nnoremap <leader>vc :action HideActiveWindow<CR>
+
+" rc
+nnoremap <leader>rce :e ~/.ideavimrc
+nnoremap <leader>rcs :source ~/.ideavimrc
