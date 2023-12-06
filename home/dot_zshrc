@@ -18,13 +18,7 @@ eval "$(zoxide init zsh)"
 # custom configs
 bindkey '^v' edit-command-line
 
-# editor
-if command -v vim &> /dev/null
-then
-  export EDITOR=vim
-else
-  export EDITOR=nvim
-fi
+export EDITOR=vim
 
 # alias
 r() {
@@ -39,13 +33,6 @@ r() {
     . "$NNN_TMPFILE"
     rm -f "$NNN_TMPFILE" > /dev/null
   }
-}
-
-vy() {
-  TMP_FILE="/tmp/v-yaml.yaml"
-  cat - > $TMP_FILE
-  nvim $TMP_FILE
-  rm $TMP_FILE
 }
 
 copy-git-branch-name() {

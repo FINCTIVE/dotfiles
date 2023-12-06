@@ -1,6 +1,7 @@
-syntax on 
-set t_Co=16 " 16-color
-set tabstop=4 " Sets the width of a tab to 4 spaces
-set hlsearch " Highlights all instances of a searched term
-set number " Displays line numbers in the gutter
-set clipboard=unnamed " Allows Vim to access the system clipboard
+syntax on    " enables syntax highlighting
+set t_Co=16  " sets the number of colors supported by your terminal to 16
+set tabstop=4  " sets the width of tabstop to 4 spaces
+set hlsearch  " highlights all matches of a search operation
+set number  " enables line numbering
+set clipboard=unnamed  " allows copy-pasting straight to/from the OS clipboard
+set nowrap  " disables automatic line wrapping

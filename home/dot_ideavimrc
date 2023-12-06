@@ -1,3 +1,4 @@
+set ideajoin
 " system clipboard
 set clipboard=unnamedplus
 set clipboard+=ideaput
@@ -17,8 +18,9 @@ nnoremap <leader>f :action ReformatCode<CR>
 
 " x => execute
 nnoremap <leader>xx :action RunClass<CR>
-nnoremap <leader>xc :action RunCoverage<CR>
 nnoremap <leader>xd :action DebugClass<CR>
+nnoremap <leader>xc :action RunCoverage<CR>
+nnoremap <leader>xf :action CreateRunConfiguration<CR>
 nnoremap <leader>xp :action ToggleLineBreakpoint<CR>
 
 " d => debugger
@@ -58,4 +60,4 @@ nnoremap <leader>vc :action HideActiveWindow<CR>
 
 " rc
 nnoremap <leader>rce :e ~/.ideavimrc
-nnoremap <leader>rcs :source ~/.ideavimrc
+enoremap <leader>rcs :source ~/.ideavimrc
