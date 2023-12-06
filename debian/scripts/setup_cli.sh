@@ -7,8 +7,8 @@ sudo apt-get install -y --no-install-recommends \
   iproute2 net-tools iputils-ping curl wget netcat-openbsd tcpdump \
   git make \
   htop ncdu nload termshark \
-  tmux zsh neovim \
-  zoxide nnn fzf jq silversearcher-ag
+  tmux zsh vim \
+  zoxide nnn fzf jq
 
 # zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
