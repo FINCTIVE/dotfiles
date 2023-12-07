@@ -3,11 +3,11 @@ echo "install cli tools"
 
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
-  procps lsof ca-certificates \
-  iproute2 net-tools iputils-ping curl wget netcat-openbsd tcpdump \
-  git make \
-  htop ncdu nload termshark \
-  tmux zsh vim \
+  procps lsof \
+  iproute2 net-tools iputils-ping netcat-openbsd \
+  ca-certificates curl wget \
+  htop ncdu nload tcpdump termshark \
+  git zsh vim \
   zoxide nnn fzf jq
 
 # zsh
