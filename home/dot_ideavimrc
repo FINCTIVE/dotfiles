@@ -10,54 +10,51 @@ set NERDTree
 set smartcase
 set hlsearch
 
+nnoremap / :action Replace<CR>
+
+nnoremap <leader>q :action HideActiveWindow<CR>
+nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+nnoremap <leader>f :action ReformatCode<CR>
+nnoremap <leader>b :action ToggleLineBreakpoint<CR>
+
+
+" tab
 nnoremap <C-P> :action NextTab<CR>
 nnoremap <C-N> :action PreviousTab<CR>
 
-nnoremap / :action Replace<CR>
-nnoremap <leader>f :action ReformatCode<CR>
 
-" x => execute
-nnoremap <leader>xx :action RunClass<CR>
-nnoremap <leader>xd :action DebugClass<CR>
-nnoremap <leader>xc :action RunCoverage<CR>
-nnoremap <leader>xf :action CreateRunConfiguration<CR>
-nnoremap <leader>xp :action ToggleLineBreakpoint<CR>
+" debugger
+nnoremap <C-I> :action StepOut<CR>
+nnoremap <C-K> :action StepInto<CR>
+nnoremap <C-J> :action Resume<CR>
+nnoremap <C-L> :action StepOver<CR>
 
-" d => debugger
-nnoremap <leader>dq :action Stop<CR>
-nnoremap <leader>df :action StepOver<CR>
-nnoremap <leader>dr :action Resume<CR>
-nnoremap <leader>dj :action StepInto<CR>
-nnoremap <leader>dk :action StepOut<CR>
 
-" g => go
-nnoremap <leader>gf :action SelectInProjectView<CR>
-nnoremap <leader>gg :action GotoFile<CR>
-nnoremap <leader>gs :action FileStructurePopup<CR>
-nnoremap <leader>gx :action ChooseRunConfiguration<CR>
-nnoremap <leader>gi :action GotoImplementation<CR>
-nnoremap <leader>gu :action GotoSuperMethod<CR>
+" e => error / execute
+nnoremap <leader>en :action GotoNextError<CR>
+nnoremap <leader>eN :action GotoPreviousError<CR>
+nnoremap <leader>ei :action ShowIntentionActions<CR>
 
-" t => terminal
-nnoremap <leader>tp :action ActivateTerminalToolWindow<CR>
-nnoremap <leader>tt :action Terminal.OpenInTerminal<CR>
+nnoremap <leader>ee :action RunClass<CR>
+nnoremap <leader>er :action DebugClass<CR>
+nnoremap <leader>ew :action RunCoverage<CR>
+nnoremap <leader>ef :action ChooseRunConfiguration<CR>
+nnoremap <leader>eq :action Stop<CR>
+
 
 " r => refactor
 nnoremap <Leader>rn :action RenameElement<CR>
 nnoremap <leader>ru :action FindUsages<CR>
+nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 
-" e => error
-nnoremap <leader>en :action GotoNextError<CR>
-nnoremap <leader>eN :action GotoPreviousError<CR>
-nnoremap <leader>ee :action ShowIntentionActions<CR>
-nnoremap <leader>et :action ActivateProblemsViewToolWindow<CR>
-nnoremap <leader>ei :action InspectCode<CR>
 
-" v => view
-nnoremap <leader>vt :action ChangeLaf<CR>
-nnoremap <leader>vh :action Vcs.ShowTabbedFileHistory<CR>
-nnoremap <leader>vc :action HideActiveWindow<CR>
+" g => go
+nnoremap <leader>ge :action SearchEverywhere<CR>
+nnoremap <leader>gg :action FindInPath<CR>
 
-" rc
-nnoremap <leader>rce :e ~/.ideavimrc
-enoremap <leader>rcs :source ~/.ideavimrc
+nnoremap <leader>gi :action GotoImplementation<CR>
+nnoremap <leader>gu :action GotoSuperMethod<CR>
+
+nnoremap <leader>gf :action SelectInProjectView<CR>
+nnoremap <leader>gs :action FileStructurePopup<CR>
+nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
