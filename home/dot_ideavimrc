@@ -49,8 +49,9 @@ nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 
 
 " g => go
-nnoremap <leader>ge :action SearchEverywhere<CR>
-nnoremap <leader>gg :action FindInPath<CR>
+nnoremap <leader>gg :action SearchEverywhere<CR>
+nnoremap <leader>gj :action FindInPath<CR>
+nnoremap <leader>gr :action RecentLocations<CR>
 
 nnoremap <leader>gi :action GotoImplementation<CR>
 nnoremap <leader>gu :action GotoSuperMethod<CR>
@@ -58,3 +59,5 @@ nnoremap <leader>gu :action GotoSuperMethod<CR>
 nnoremap <leader>gf :action SelectInProjectView<CR>
 nnoremap <leader>gs :action FileStructurePopup<CR>
 nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
+
+nnoremap <leader>gv :e ~/.ideavimrc<CR>

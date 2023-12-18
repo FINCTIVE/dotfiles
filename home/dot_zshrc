@@ -35,6 +35,8 @@ r() {
   }
 }
 
+alias v='vim -'
+
 copy-git-branch-name() {
   git symbolic-ref --short HEAD | awk '{printf "%s", $0}' | pbcopy
 }
