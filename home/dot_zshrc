@@ -60,7 +60,10 @@ kc() {
 
   local kubeconfig_file_name
   kubeconfig_file_name=$(basename "$selected_file" | sed -e 's/\.[^.]*$//')
-  export PROMPT=$'\n'"KUBECONFIG CTX -> ${kubeconfig_file_name}$ORIG_PROMPT"
+  bold=$(tput bold)
+  green=$(tput setaf 3)
+  reset=$(tput sgr0)
+  export PROMPT=$'\n'"${bold}${green}KUBECONFIG CTX${reset} -> ${kubeconfig_file_name} $ORIG_PROMPT"
 }
 
 kcc() {
