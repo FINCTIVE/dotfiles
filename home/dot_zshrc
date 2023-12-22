@@ -16,11 +16,13 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 # custom configs
+export EDITOR=vim
 bindkey '^v' edit-command-line
 
-export EDITOR=vim
-
 # alias
+alias v='vim -'
+alias le='less -R'
+
 r() {
   [ "${NNNLVL:-0}" -eq 0 ] || {
     echo "nnn is already running"
@@ -35,8 +37,38 @@ r() {
   }
 }
 
-alias v='vim -'
-
 copy-git-branch-name() {
   git symbolic-ref --short HEAD | awk '{printf "%s", $0}' | pbcopy
+}
+
+# KC --> kube ctx
+# reset kubeconfig by default
+export KUBECONFIG=""
+
+ORIG_PROMPT="$PROMPT"
+
+kc() {
+  local selected_file
+  selected_file=$(find "$KC_KUBECONFIG_DIR" -type f | fzf)
+
+  if [ $? -ne 0 ]; then
+    echo "failed to select kubeconfig, kc exited"
+    return 1
+  fi
+  
+  export KUBECONFIG="$selected_file"
+
+  local kubeconfig_file_name
+  kubeconfig_file_name=$(basename "$selected_file" | sed -e 's/\.[^.]*$//')
+  export PROMPT=$'\n'"KUBECONFIG CTX -> ${kubeconfig_file_name}$ORIG_PROMPT"
+}
+
+kcc() {
+  export KUBECONFIG=""
+  export PROMPT="$ORIG_PROMPT"
+}
+
+kci() {
+  kubectl get ns
+  kubectl config view
 }
