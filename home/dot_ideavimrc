@@ -12,8 +12,8 @@ set hlsearch
 
 nnoremap / :action Replace<CR>
 
-nnoremap <leader>q :action HideActiveWindow<CR>
-nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
+" nnoremap <leader>q :action HideActiveWindow<CR>
+nnoremap <leader>q :action HideAllWindows<CR>
 nnoremap <leader>f :action ReformatCode<CR>
 nnoremap <leader>b :action ToggleLineBreakpoint<CR>
 
@@ -49,15 +49,16 @@ nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
 
 
 " g => go
-nnoremap <leader>gg :action SearchEverywhere<CR>
-nnoremap <leader>gj :action FindInPath<CR>
+nnoremap <leader>gg :action GotoFile<CR>
+nnoremap <leader>gs :action FindInPath<CR>
 nnoremap <leader>gr :action RecentLocations<CR>
 
 nnoremap <leader>gi :action GotoImplementation<CR>
 nnoremap <leader>gu :action GotoSuperMethod<CR>
 
 nnoremap <leader>gf :action SelectInProjectView<CR>
-nnoremap <leader>gs :action FileStructurePopup<CR>
+nnoremap <leader>gt :action Terminal.OpenInTerminal<CR>
+"nnoremap <leader>gs :action FileStructurePopup<CR>
 nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
 
 nnoremap <leader>gv :e ~/.ideavimrc<CR>
