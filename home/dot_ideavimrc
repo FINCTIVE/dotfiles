@@ -1,34 +1,28 @@
 set ideajoin
+set smartcase
+set hlsearch
+" no sound
+set visualbell
 " system clipboard
 set clipboard=unnamedplus
 set clipboard+=ideaput
-" no sound
-set visualbell
 " plugins
 set NERDTree
-" search
-set smartcase
-set hlsearch
 
 nnoremap / :action Replace<CR>
 
-" nnoremap <leader>q :action HideActiveWindow<CR>
 nnoremap <leader>q :action HideAllWindows<CR>
 nnoremap <leader>f :action ReformatCode<CR>
 nnoremap <leader>b :action ToggleLineBreakpoint<CR>
 
-
-" tab
 nnoremap <C-P> :action NextTab<CR>
 nnoremap <C-N> :action PreviousTab<CR>
-
 
 " debugger
 nnoremap <C-I> :action StepOut<CR>
 nnoremap <C-K> :action StepInto<CR>
 nnoremap <C-J> :action Resume<CR>
 nnoremap <C-L> :action StepOver<CR>
-
 
 " e => error / execute
 nnoremap <leader>en :action GotoNextError<CR>
@@ -41,12 +35,10 @@ nnoremap <leader>ew :action RunCoverage<CR>
 nnoremap <leader>ef :action ChooseRunConfiguration<CR>
 nnoremap <leader>eq :action Stop<CR>
 
-
 " r => refactor
 nnoremap <Leader>rn :action RenameElement<CR>
 nnoremap <leader>ru :action FindUsages<CR>
 nnoremap <leader>rr :action Refactorings.QuickListPopupAction<CR>
-
 
 " g => go
 nnoremap <leader>gg :action GotoFile<CR>
@@ -58,7 +50,10 @@ nnoremap <leader>gu :action GotoSuperMethod<CR>
 
 nnoremap <leader>gf :action SelectInProjectView<CR>
 nnoremap <leader>gt :action Terminal.OpenInTerminal<CR>
-"nnoremap <leader>gs :action FileStructurePopup<CR>
 nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
 
-nnoremap <leader>gv :e ~/.ideavimrc<CR>
+nnoremap <leader>g? :e ~/.ideavimrc<CR>
+
+" v => view
+nnoremap <leader>vs :action FileStructurePopup<CR>
+nnoremap <leader>vh :action Annotate<CR>
