@@ -1,11 +1,12 @@
 [
     {
-        "key": "ctrl+cmd+n",
+        "key": "ctrl+n",
         "command": "workbench.action.previousEditor",
+        // todo: only in not list view
         "when": "editorTextFocus",
     },
     {
-        "key": "ctrl+cmd+p",
+        "key": "ctrl+p",
         "command": "workbench.action.nextEditor",
         "when": "editorTextFocus",
     },

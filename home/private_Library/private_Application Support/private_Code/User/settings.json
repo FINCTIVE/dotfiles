@@ -1,18 +1,7 @@
 {
-    // Hide unused UI elements
-    "editor.minimap.enabled": false,
-    "window.commandCenter": false,
-    "workbench.layoutControl.enabled": false,
-    // Editor
-    "editor.fontSize": 14,
-    "editor.bracketPairColorization.enabled": false,
-    // Appereance
-    "workbench.sideBar.location": "right",
-    "window.autoDetectColorScheme": true,
-    "workbench.preferredDarkColorTheme": "Nord",
-    "workbench.colorTheme": "Default Light Modern",
     // Vim
     "vim.useSystemClipboard": true,
+    "vim.foldfix": true,
     // Vim Keybindings
     "vim.normalModeKeyBindingsNonRecursive": [
         // Remap keys
@@ -34,6 +23,15 @@
         },
         {
             "before": [
+                "K"
+            ],
+            "after": [
+                "g",
+                "h"
+            ]
+        },
+        {
+            "before": [
                 "/",
             ],
             "commands": [
@@ -49,7 +47,7 @@
             ],
             "commands": [
                 "workbench.action.toggleSidebarVisibility",
-                "notification.clear"
+                "notifications.clearAll"
             ]
         },
         {
@@ -165,4 +163,20 @@
             ],
         },
     ],
+    // Appereance
+    "workbench.sideBar.location": "right",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Nord",
+    "workbench.colorTheme": "Nord",
+    "editor.bracketPairColorization.enabled": false,
+    "editor.fontFamily": "'Jetbrains Mono'",
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    // Hide unused UI elements
+    "editor.minimap.enabled": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    // Editor
+    "files.autoSave": "onFocusChange",
+    "explorer.confirmDragAndDrop": false,
 }
