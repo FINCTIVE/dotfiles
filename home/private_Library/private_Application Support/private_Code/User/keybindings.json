@@ -1,0 +1,26 @@
+[
+    {
+        "key": "ctrl+cmd+n",
+        "command": "workbench.action.previousEditor",
+        "when": "editorTextFocus",
+    },
+    {
+        "key": "ctrl+cmd+p",
+        "command": "workbench.action.nextEditor",
+        "when": "editorTextFocus",
+    },
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.terminal.toggleTerminal",
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!inputFocus",
+    },
+    {
+        "key": "cmd+enter",
+        "command": "search.action.focusNextSearchResult",
+        "when": "inSearchEditor",
+    },
+]

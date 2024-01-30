@@ -1,0 +1,168 @@
+{
+    // Hide unused UI elements
+    "editor.minimap.enabled": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    // Editor
+    "editor.fontSize": 14,
+    "editor.bracketPairColorization.enabled": false,
+    // Appereance
+    "workbench.sideBar.location": "right",
+    "window.autoDetectColorScheme": true,
+    "workbench.preferredDarkColorTheme": "Nord",
+    "workbench.colorTheme": "Default Light Modern",
+    // Vim
+    "vim.useSystemClipboard": true,
+    // Vim Keybindings
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Remap keys
+        {
+            "before": [
+                "H",
+            ],
+            "after": [
+                "^",
+            ],
+        },
+        {
+            "before": [
+                "L",
+            ],
+            "after": [
+                "$",
+            ],
+        },
+        {
+            "before": [
+                "/",
+            ],
+            "commands": [
+                "actions.find",
+            ],
+            "when": "editorFocus || editorIsOpen"
+        },
+        // Quick
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+                "notification.clear"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f",
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ],
+        },
+        // g => go
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "f"
+            ],
+            "commands": [
+                "revealInExplorer"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "g"
+            ],
+            "commands": [
+                "workbench.action.quickOpen"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "s"
+            ],
+            "commands": [
+                "search.action.openEditor",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "o"
+            ],
+            "commands": [
+                "outline.focus",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "t"
+            ],
+            "commands": [
+                "openInIntegratedTerminal",
+            ],
+        },
+        // e => error / execute
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "n"
+            ],
+            "commands": [
+                "editor.action.marker.next",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "N"
+            ],
+            "commands": [
+                "editor.action.marker.prev",
+            ],
+        },
+        // r => refactor
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "n"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "u"
+            ],
+            "commands": [
+                "references-view.findReferences"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation",
+            ],
+        },
+    ],
+}
