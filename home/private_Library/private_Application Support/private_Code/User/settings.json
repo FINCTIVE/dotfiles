@@ -59,6 +59,47 @@
                 "editor.action.formatDocument"
             ],
         },
+        // d => debug & debugger shortcuts
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "d"
+            ],
+            "commands": [
+                "editor.debug.action.toggleBreakpoint",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "c"
+            ],
+            "commands": [
+                "workbench.debug.viewlet.action.removeAllBreakpoints",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.debug.start"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.debug.stop",
+            ],
+        },
         // g => go
         {
             "before": [
@@ -167,7 +208,8 @@
     "workbench.sideBar.location": "right",
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "Nord",
-    "workbench.colorTheme": "Nord",
+    "workbench.preferredLightColorTheme": "Default Light Modern",
+    "workbench.colorTheme": "Default Light Modern",
     "editor.bracketPairColorization.enabled": false,
     "editor.fontFamily": "'Jetbrains Mono'",
     "editor.fontSize": 14,
@@ -179,4 +221,5 @@
     // Editor
     "files.autoSave": "onFocusChange",
     "explorer.confirmDragAndDrop": false,
+    "git.autofetch": true,
 }
