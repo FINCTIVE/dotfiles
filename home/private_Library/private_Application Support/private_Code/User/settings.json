@@ -46,7 +46,8 @@
                 "q"
             ],
             "commands": [
-                "workbench.action.toggleSidebarVisibility",
+                "workbench.action.closeSidebar",
+                "workbench.action.closePanel",
                 "notifications.clearAll"
             ]
         },
