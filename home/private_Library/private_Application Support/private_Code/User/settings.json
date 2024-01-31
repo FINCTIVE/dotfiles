@@ -207,9 +207,9 @@
     // Appereance
     "workbench.sideBar.location": "right",
     "window.autoDetectColorScheme": true,
-    "workbench.preferredDarkColorTheme": "Nord",
-    "workbench.preferredLightColorTheme": "Default Light Modern",
-    "workbench.colorTheme": "Default Light Modern",
+    "workbench.preferredDarkColorTheme": "GitHub Dark",
+    "workbench.preferredLightColorTheme": "GitHub Light",
+    "workbench.colorTheme": "GitHub Dark",
     "editor.bracketPairColorization.enabled": false,
     "editor.fontFamily": "'Jetbrains Mono'",
     "editor.fontSize": 14,
@@ -222,4 +222,5 @@
     "files.autoSave": "onFocusChange",
     "explorer.confirmDragAndDrop": false,
     "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "never",
 }
