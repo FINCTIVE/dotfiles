@@ -3,6 +3,10 @@
     "vim.useSystemClipboard": true,
     "vim.foldfix": true,
     // Vim Keybindings
+    "vim.handleKeys": {
+        // switch window
+        "<C-w>": false,
+    },
     "vim.normalModeKeyBindingsNonRecursive": [
         // Remap keys
         {
