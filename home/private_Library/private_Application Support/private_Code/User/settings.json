@@ -4,8 +4,6 @@
     "vim.foldfix": true,
     // Vim Keybindings
     "vim.visualModeKeyBindingsNonRecursive": [
-        // Remap keys
-        // todo: combine
         {
             "before": [
                 "H",
@@ -24,7 +22,6 @@
         },
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
-        // Remap keys
         {
             "before": [
                 "H",
@@ -254,4 +251,5 @@
     "explorer.confirmDragAndDrop": false,
     "git.autofetch": true,
     "git.openRepositoryInParentFolders": "never",
+    "update.mode": "manual",
 }
