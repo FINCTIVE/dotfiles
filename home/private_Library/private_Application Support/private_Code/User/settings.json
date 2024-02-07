@@ -3,10 +3,26 @@
     "vim.useSystemClipboard": true,
     "vim.foldfix": true,
     // Vim Keybindings
-    "vim.handleKeys": {
-        // switch window
-        "<C-w>": false,
-    },
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Remap keys
+        // todo: combine
+        {
+            "before": [
+                "H",
+            ],
+            "after": [
+                "^",
+            ],
+        },
+        {
+            "before": [
+                "L",
+            ],
+            "after": [
+                "$",
+            ],
+        },
+    ],
     "vim.normalModeKeyBindingsNonRecursive": [
         // Remap keys
         {
@@ -156,6 +172,16 @@
                 "openInIntegratedTerminal",
             ],
         },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.switchWindow",
+            ],
+        },
         // e => error / execute
         {
             "before": [
@@ -214,7 +240,7 @@
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "GitHub Light",
     "editor.bracketPairColorization.enabled": false,
     "editor.fontFamily": "'Jetbrains Mono'",
     "editor.fontSize": 14,

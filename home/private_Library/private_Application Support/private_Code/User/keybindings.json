@@ -37,12 +37,12 @@
         "when": "inDebugMode && vim.mode == 'Normal'"
     },
     {
-        "key": "ctrl+u",
+        "key": "ctrl+h",
         "command": "workbench.action.debug.continue",
         "when": "inDebugMode && vim.mode == 'Normal'"
     },
     {
-        "key": "ctrl+i",
+        "key": "ctrl+l",
         "command": "workbench.action.debug.stepOver",
         "when": "inDebugMode && vim.mode == 'Normal'"
     },
