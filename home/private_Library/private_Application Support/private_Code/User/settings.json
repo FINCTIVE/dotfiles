@@ -252,4 +252,5 @@
     "git.autofetch": true,
     "git.openRepositoryInParentFolders": "never",
     "update.mode": "manual",
+    "diffEditor.hideUnchangedRegions.enabled": true,
 }
