@@ -1,4 +1,13 @@
 [
+    // Window
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.terminal.toggleTerminal",
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.switchWindow",
+    },
     // Editor
     {
         "key": "ctrl+n",
@@ -9,21 +18,6 @@
         "key": "ctrl+p",
         "command": "workbench.action.nextEditor",
         "when": "editorTextFocus && !listFocus && !suggestWidgetVisible",
-    },
-    // Tool
-    {
-        "key": "ctrl+m",
-        "command": "workbench.action.terminal.toggleTerminal",
-    },
-    {
-        "key": "escape",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "!inputFocus",
-    },
-    {
-        "key": "cmd+enter",
-        "command": "search.action.focusNextSearchResult",
-        "when": "inSearchEditor",
     },
     // Debugger
     {
@@ -45,5 +39,16 @@
         "key": "ctrl+l",
         "command": "workbench.action.debug.stepOver",
         "when": "inDebugMode && vim.mode == 'Normal'"
+    },
+    // Util
+    {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!inputFocus",
+    },
+    {
+        "key": "cmd+enter",
+        "command": "search.action.focusNextSearchResult",
+        "when": "inSearchEditor",
     },
 ]
