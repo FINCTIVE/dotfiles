@@ -211,3 +211,6 @@ symbol = "terraform "
 
 [zig]
 symbol = "zig "
+
+[jobs]
+symbol = "*"
