@@ -2,7 +2,13 @@
     // Window
     {
         "key": "ctrl+m",
-        "command": "workbench.action.terminal.toggleTerminal",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.minimizeOtherEditorsHideSidebar",
+                "workbench.action.terminal.toggleTerminal",
+            ]
+        }
     },
     {
         "key": "ctrl+w",

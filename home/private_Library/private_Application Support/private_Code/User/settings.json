@@ -237,7 +237,7 @@
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
-    "workbench.colorTheme": "GitHub Light",
+    "workbench.colorTheme": "GitHub Dark",
     "editor.bracketPairColorization.enabled": false,
     "editor.fontFamily": "'Jetbrains Mono'",
     "editor.fontSize": 14,
