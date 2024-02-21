@@ -1,5 +1,7 @@
 nnoremap H ^
 nnoremap L $
+xnoremap H ^
+xnoremap L $
 
 syntax on    " enables syntax highlighting
 set t_Co=16  " sets the number of colors supported by your terminal to 16

@@ -237,7 +237,7 @@
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "GitHub Light",
     "editor.bracketPairColorization.enabled": false,
     "editor.fontFamily": "'Jetbrains Mono'",
     "editor.fontSize": 14,
@@ -253,4 +253,6 @@
     "git.openRepositoryInParentFolders": "never",
     "update.mode": "manual",
     "diffEditor.hideUnchangedRegions.enabled": true,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.defaultGravatarsStyle": "identicon",
 }
