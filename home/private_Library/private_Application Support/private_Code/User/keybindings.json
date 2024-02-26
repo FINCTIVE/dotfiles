@@ -29,22 +29,22 @@
     {
         "key": "ctrl+j",
         "command": "workbench.action.debug.stepInto",
-        "when": "inDebugMode && vim.mode == 'Normal'"
+        "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
     },
     {
         "key": "ctrl+k",
         "command": "workbench.action.debug.stepOut",
-        "when": "inDebugMode && vim.mode == 'Normal'"
+        "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
     },
     {
         "key": "ctrl+h",
         "command": "workbench.action.debug.continue",
-        "when": "inDebugMode && vim.mode == 'Normal'"
+        "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
     },
     {
         "key": "ctrl+l",
         "command": "workbench.action.debug.stepOver",
-        "when": "inDebugMode && vim.mode == 'Normal'"
+        "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
     },
     // Util
     {
