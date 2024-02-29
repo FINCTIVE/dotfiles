@@ -102,10 +102,20 @@
             "before": [
                 "<leader>",
                 "d",
-                "f"
+                "g"
             ],
             "commands": [
                 "workbench.action.debug.start"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "f"
+            ],
+            "commands": [
+                "testing.runAtCursor"
             ],
         },
         {
@@ -251,4 +261,5 @@
     "git.autofetch": true,
     "git.openRepositoryInParentFolders": "never",
     "update.mode": "manual",
+    "diffEditor.hideUnchangedRegions.enabled": true,
 }
