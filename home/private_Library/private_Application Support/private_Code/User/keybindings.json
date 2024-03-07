@@ -11,6 +11,15 @@
         }
     },
     {
+        "key": "ctrl+shift+m",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.terminal.new"
+            ]
+        }
+    },
+    {
         "key": "ctrl+w",
         "command": "workbench.action.switchWindow",
     },
