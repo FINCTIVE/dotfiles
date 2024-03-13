@@ -5,7 +5,7 @@
         "command": "runCommands",
         "args": {
             "commands": [
-                "workbench.action.minimizeOtherEditorsHideSidebar",
+                // "workbench.action.minimizeOtherEditorsHideSidebar",
                 "workbench.action.terminal.toggleTerminal",
             ]
         }
