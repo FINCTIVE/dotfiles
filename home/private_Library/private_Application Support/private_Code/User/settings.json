@@ -77,6 +77,15 @@
                 "editor.action.formatDocument"
             ],
         },
+        {
+            "before": [
+                "<leader>",
+                "w",
+            ],
+            "commands": [
+                "editor.action.toggleWordWrap"
+            ],
+        },
         // d => debug & debugger shortcuts
         {
             "before": [
@@ -189,6 +198,37 @@
                 "workbench.action.switchWindow",
             ],
         },
+        // s => source control
+        {
+            "before": [
+                "<leader>",
+                "s",
+                "d"
+            ],
+            "commands": [
+                "git.openChange",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "s",
+                "c"
+            ],
+            "commands": [
+                "git.closeAllDiffEditors",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "s",
+                "o"
+            ],
+            "commands": [
+                "diffEditor.toggleCollapseUnchangedRegions"
+            ],
+        },
         // e => error / execute
         {
             "before": [
@@ -261,5 +301,4 @@
     "update.mode": "manual",
     "editor.accessibilitySupport": "off",
     "editor.stickyScroll.enabled": true,
-    "diffEditor.hideUnchangedRegions.enabled": true,
 }

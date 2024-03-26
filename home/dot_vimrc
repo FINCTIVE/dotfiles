@@ -10,3 +10,5 @@ set hlsearch  " highlights all matches of a search operation
 set number  " enables line numbering
 set clipboard=unnamed  " allows copy-pasting straight to/from the OS clipboard
 set nowrap  " disables automatic line wrapping
+
+nnoremap <leader>w :if &wrap \| set nowrap \| else \| set wrap \| endif<CR>
