@@ -301,4 +301,5 @@
     "update.mode": "manual",
     "editor.accessibilitySupport": "off",
     "editor.stickyScroll.enabled": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
 }

@@ -1,27 +1,32 @@
 [
-    // Window
+    // Util
     {
-        "key": "ctrl+m",
-        "command": "runCommands",
-        "args": {
-            "commands": [
-                // "workbench.action.minimizeOtherEditorsHideSidebar",
-                "workbench.action.terminal.toggleTerminal",
-            ]
-        }
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!inputFocus",
     },
     {
-        "key": "ctrl+shift+m",
-        "command": "runCommands",
-        "args": {
-            "commands": [
-                "workbench.action.terminal.new"
-            ]
-        }
+        "key": "cmd+enter",
+        "command": "search.action.focusNextSearchResult",
+        "when": "inSearchEditor",
     },
+    // Defaults, redeclare to override VS Code Vim config
     {
         "key": "ctrl+w",
         "command": "workbench.action.switchWindow",
+    },
+    // Terminal
+    {
+        "key": "ctrl+m",
+        "command": "workbench.action.terminal.toggleTerminal",
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "workbench.action.terminal.new",
+    },
+    {
+        "key": "cmd+shift+m",
+        "command": "workbench.action.toggleMaximizedPanel",
     },
     // Editor
     {
@@ -54,16 +59,5 @@
         "key": "ctrl+l",
         "command": "workbench.action.debug.stepOver",
         "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
-    },
-    // Util
-    {
-        "key": "escape",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "!inputFocus",
-    },
-    {
-        "key": "cmd+enter",
-        "command": "search.action.focusNextSearchResult",
-        "when": "inSearchEditor",
     },
 ]
