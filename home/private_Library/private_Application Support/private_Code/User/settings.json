@@ -86,7 +86,7 @@
                 "editor.action.toggleWordWrap"
             ],
         },
-        // d => debug & debugger shortcuts
+        // d => debugger
         {
             "before": [
                 "<leader>",
@@ -117,24 +117,24 @@
                 "workbench.action.debug.start"
             ],
         },
+        // t => testing
         {
             "before": [
                 "<leader>",
-                "d",
-                "f"
+                "t",
+                "t"
             ],
             "commands": [
-                "testing.runAtCursor"
+                "testing.debugAtCursor"
             ],
         },
         {
             "before": [
                 "<leader>",
-                "d",
-                "q"
+                "t",
             ],
             "commands": [
-                "workbench.action.debug.stop",
+                "testing.debugLastRun"
             ],
         },
         // g => go
@@ -229,7 +229,27 @@
                 "diffEditor.toggleCollapseUnchangedRegions"
             ],
         },
-        // e => error / execute
+        // e => editor navigation
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.editor.nextChange"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "J"
+            ],
+            "commands": [
+                "workbench.action.editor.previousChange"
+            ],
+        },
         {
             "before": [
                 "<leader>",
