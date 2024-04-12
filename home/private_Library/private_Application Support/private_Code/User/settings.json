@@ -49,6 +49,14 @@
         },
         {
             "before": [
+                "Q"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
                 "/",
             ],
             "commands": [
@@ -63,7 +71,6 @@
                 "q"
             ],
             "commands": [
-                // "workbench.action.closeSidebar",
                 "workbench.action.closePanel",
                 "notifications.clearAll"
             ]
