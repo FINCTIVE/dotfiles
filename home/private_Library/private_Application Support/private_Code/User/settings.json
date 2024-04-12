@@ -64,17 +64,7 @@
             ],
             "when": "editorFocus || editorIsOpen"
         },
-        // Quick
-        {
-            "before": [
-                "<leader>",
-                "q"
-            ],
-            "commands": [
-                "workbench.action.closePanel",
-                "notifications.clearAll"
-            ]
-        },
+        // / => Quick Access
         {
             "before": [
                 "<leader>",
@@ -92,6 +82,27 @@
             "commands": [
                 "editor.action.toggleWordWrap"
             ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closePanel",
+                "notifications.clearAll",
+                "closeFindWidget"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "z"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+                "workbench.action.toggleActivityBarVisibility"
+            ]
         },
         // d => debugger
         {
@@ -214,6 +225,16 @@
             ],
             "commands": [
                 "workbench.action.switchWindow",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "r"
+            ],
+            "commands": [
+                "workbench.action.openRecent"
             ],
         },
         // s => source control

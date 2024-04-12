@@ -1,5 +1,4 @@
 [
-    // Util
     {
         "key": "escape",
         "command": "workbench.action.focusActiveEditorGroup",
@@ -10,13 +9,9 @@
         "command": "search.action.focusNextSearchResult",
         "when": "inSearchEditor",
     },
-    // Defaults, redeclare to override VS Code Vim config
-    {
-        "key": "ctrl+w",
-        "command": "workbench.action.switchWindow",
-    },
     // Panel
     {
+        // related: cmd+j
         "key": "ctrl+cmd+j",
         "command": "workbench.action.toggleMaximizedPanel",
     },
