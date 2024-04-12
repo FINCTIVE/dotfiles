@@ -15,7 +15,11 @@
         "key": "ctrl+w",
         "command": "workbench.action.switchWindow",
     },
-    // Terminal
+    // Panel
+    {
+        "key": "ctrl+cmd+j",
+        "command": "workbench.action.toggleMaximizedPanel",
+    },
     {
         "key": "ctrl+m",
         "command": "workbench.action.terminal.toggleTerminal",
@@ -25,8 +29,12 @@
         "command": "workbench.action.terminal.new",
     },
     {
-        "key": "cmd+shift+m",
-        "command": "workbench.action.toggleMaximizedPanel",
+        "key": "ctrl+,",
+        "command": "workbench.debug.action.toggleRepl",
+    },
+    {
+        "key": "ctrl+.",
+        "command": "workbench.actions.view.problems",
     },
     // Editor
     {
@@ -41,23 +49,23 @@
     },
     // Debugger
     {
-        "key": "ctrl+j",
-        "command": "workbench.action.debug.stepInto",
-        "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.debug.stepOut",
-        "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
-    },
-    {
         "key": "ctrl+h",
         "command": "workbench.action.debug.continue",
         "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
     },
     {
-        "key": "ctrl+l",
+        "key": "ctrl+j",
         "command": "workbench.action.debug.stepOver",
+        "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.debug.stepInto",
+        "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.debug.stepOut",
         "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
     },
 ]

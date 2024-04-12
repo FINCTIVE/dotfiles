@@ -124,6 +124,16 @@
                 "workbench.action.debug.start"
             ],
         },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.debug.stop"
+            ],
+        },
         // t => testing
         {
             "before": [
