@@ -132,6 +132,7 @@
             "before": [
                 "<leader>",
                 "t",
+                "r"
             ],
             "commands": [
                 "testing.debugLastRun"
