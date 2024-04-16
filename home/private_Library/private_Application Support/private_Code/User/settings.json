@@ -166,6 +166,16 @@
                 "testing.debugLastRun"
             ],
         },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "c"
+            ],
+            "commands": [
+                "go.test.coverage"
+            ],
+        },
         // g => go
         {
             "before": [
@@ -344,7 +354,7 @@
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "GitHub Light",
     "editor.bracketPairColorization.enabled": false,
     "editor.fontSize": 14,
     "terminal.integrated.fontSize": 14,
