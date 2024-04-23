@@ -368,7 +368,9 @@
     "git.autofetch": true,
     "git.openRepositoryInParentFolders": "never",
     "update.mode": "manual",
+    "editor.rulers": [
+        120
+    ],
     "editor.accessibilitySupport": "off",
     "editor.stickyScroll.enabled": true,
-    "diffEditor.hideUnchangedRegions.enabled": true,
 }
