@@ -44,6 +44,11 @@
     },
     // Debugger
     {
+        "key": "ctrl+d",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "inDebugMode && !terminalFocus"
+    },
+    {
         "key": "ctrl+h",
         "command": "workbench.action.debug.continue",
         "when": "inDebugMode && !terminalFocus"
