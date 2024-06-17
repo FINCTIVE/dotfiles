@@ -63,4 +63,14 @@
         "command": "workbench.action.debug.stepOut",
         "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
     },
+    {
+        "key": "ctrl+;",
+        "command": "workbench.action.debug.restart",
+        "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "workbench.action.debug.stop",
+        "when": "inDebugMode && vim.mode == 'Normal' && !terminalFocus"
+    },
 ]
