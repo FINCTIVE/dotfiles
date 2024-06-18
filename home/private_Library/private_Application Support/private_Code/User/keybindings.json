@@ -16,20 +16,21 @@
         "command": "workbench.action.toggleMaximizedPanel",
     },
     {
-        "key": "ctrl+m",
-        "command": "workbench.action.terminal.toggleTerminal",
-    },
-    {
-        "key": "ctrl+shift+m",
-        "command": "workbench.action.terminal.new",
-    },
-    {
         "key": "ctrl+,",
-        "command": "workbench.debug.action.toggleRepl",
+        "command": "workbench.action.previousPanelView",
     },
     {
         "key": "ctrl+.",
-        "command": "workbench.actions.view.problems",
+        "command": "workbench.action.nextPanelView",
+    },
+    // Terminal
+    {
+        "key": "cmd+u c",
+        "command": "workbench.action.terminal.copyLastCommandOutput",
+    },
+    {
+        "key": "cmd+u n",
+        "command": "workbench.action.terminal.new",
     },
     // Editor
     {
