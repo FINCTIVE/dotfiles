@@ -58,18 +58,4 @@ kcc() {
   export PROMPT="$KC_ORIG_PROMPT"
 }
 
-# ----- ZLE -----
-edit_command_line_history() {
-  BUFFER=$(
-    history | \
-    tail -20 | \
-    awk '{$1=""; sub(/^ */, ""); print $0}' | \
-    grep -v -x -e 'r' -e 'ls' -e 'pwd'
-  )
-  zle edit-command-line
-}
-zle -N edit_command_line_history
-
-# ----- bindkey -----
-bindkey '^h' edit_command_line_history
 bindkey '^v' edit-command-line
