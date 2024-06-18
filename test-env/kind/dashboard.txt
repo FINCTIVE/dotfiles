@@ -1,0 +1,9 @@
+# Install Grafana Dashboards
+
+-  Log in with the default `admin` account.
+
+-  Import with URL.
+
+Kubernetes monitoring:
+
+https://grafana.com/grafana/dashboards/315-kubernetes-cluster-monitoring-via-prometheus/

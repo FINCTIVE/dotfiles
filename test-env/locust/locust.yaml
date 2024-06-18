@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: locust-master
+  namespace: locust
+  labels:
+    app: locust-master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: locust-master
+  template:
+    metadata:
+      labels:
+        app: locust-master
+    spec:
+      volumes:
+      - name: locustfile-volume
+        configMap:
+          name: locustfile-configmap
+      containers:
+      - name: locust
+        image: locustio/locust:latest
+        volumeMounts:
+        - name: locustfile-volume
+          mountPath: /mnt/locust/locustfile.py
+          subPath: locustfile.py
+        env:
+        - name: TZ
+          value: "Asia/Shanghai"
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "100m"
+        args:
+        - "-f"
+        - "/mnt/locust/locustfile.py"
+        - "--master"
+        # load test default settings
+        - "--users=900"
+        - "--spawn-rate=50"
+        - "--run-time=5min"
+        - "--host=http://istio-ingressgateway.istio-system"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: locust-worker
+  namespace: locust
+  labels:
+    app: locust-worker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: locust-worker
+  template:
+    metadata:
+      labels:
+        app: locust-worker
+    spec:
+      volumes:
+      - name: locustfile-volume
+        configMap:
+          name: locustfile-configmap
+      containers:
+      - name: locust
+        image: locustio/locust:latest
+        volumeMounts:
+        - name: locustfile-volume
+          mountPath: /mnt/locust/locustfile.py
+          subPath: locustfile.py
+        env:
+        - name: TZ
+          value: "Asia/Shanghai"
+        resources:
+          limits:
+            memory: "1Gi"
+            cpu: "1"
+        args:
+        - "-f"
+        - "/mnt/locust/locustfile.py"
+        - "--worker"
+        - "--master-host=locust-master"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: locust-master
+  namespace: locust
+spec:
+  ports:
+  - port: 5557
+    targetPort: 5557
+    protocol: TCP
+    name: master
+  - port: 8089
+    targetPort: 8089
+    protocol: TCP
+    name: web
+  selector:
+    app: locust-master
