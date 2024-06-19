@@ -380,6 +380,27 @@
                 "editor.action.goToImplementation",
             ],
         },
+        // w => window management
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.moveEditorLeftInGroup"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "l"
+            ],
+            "commands": [
+                "workbench.action.moveEditorRightInGroup"
+            ],
+        },
     ],
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
