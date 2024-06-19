@@ -312,16 +312,6 @@
                 "git.closeAllDiffEditors",
             ],
         },
-        {
-            "before": [
-                "<leader>",
-                "s",
-                "o"
-            ],
-            "commands": [
-                "diffEditor.toggleCollapseUnchangedRegions"
-            ],
-        },
         // e => editor navigation
         {
             "before": [
@@ -330,7 +320,8 @@
                 "j"
             ],
             "commands": [
-                "workbench.action.editor.nextChange"
+                "workbench.action.editor.nextChange",
+                "workbench.action.compareEditor.nextChange"
             ],
         },
         {
@@ -340,7 +331,8 @@
                 "J"
             ],
             "commands": [
-                "workbench.action.editor.previousChange"
+                "workbench.action.editor.previousChange",
+                "workbench.action.compareEditor.previousChange"
             ],
         },
         {
@@ -448,6 +440,7 @@
     ],
     "editor.accessibilitySupport": "off",
     "editor.stickyScroll.enabled": true,
-    "diffEditor.hideUnchangedRegions.enabled": true,
     "workbench.editor.enablePreview": false,
+    // Disable code fold in the diff editor to prevent the Vim bug.
+    "diffEditor.hideUnchangedRegions.enabled": false
 }
