@@ -2,7 +2,7 @@
     {
         "key": "escape",
         "command": "workbench.action.focusActiveEditorGroup",
-        "when": "!inputFocus",
+        "when": "!editorFocus && !terminalFocus",
     },
     {
         "key": "cmd+enter",

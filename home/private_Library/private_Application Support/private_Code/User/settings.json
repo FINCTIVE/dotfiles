@@ -252,10 +252,30 @@
             "before": [
                 "<leader>",
                 "s",
+                "s"
+            ],
+            "commands": [
+                "workbench.scm.focus"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "s",
                 "d"
             ],
             "commands": [
                 "git.openChange",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "s",
+                "f"
+            ],
+            "commands": [
+                "git.openFile",
             ],
         },
         {
@@ -344,6 +364,16 @@
             "before": [
                 "<leader>",
                 "r",
+                "r"
+            ],
+            "commands": [
+                "references-view.tree.focus",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
                 "i"
             ],
             "commands": [
@@ -354,7 +384,7 @@
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
-    "workbench.colorTheme": "GitHub Dark",
+    "workbench.colorTheme": "GitHub Light",
     "editor.bracketPairColorization.enabled": false,
     "editor.fontSize": 14,
     "terminal.integrated.fontSize": 14,
@@ -374,4 +404,5 @@
     "editor.accessibilitySupport": "off",
     "editor.stickyScroll.enabled": true,
     "diffEditor.hideUnchangedRegions.enabled": true,
+    "workbench.editor.enablePreview": false,
 }
