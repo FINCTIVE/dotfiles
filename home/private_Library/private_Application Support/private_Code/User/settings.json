@@ -153,6 +153,16 @@
                 "t"
             ],
             "commands": [
+                "workbench.view.testing.focus"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "g"
+            ],
+            "commands": [
                 "testing.debugAtCursor"
             ],
         },
