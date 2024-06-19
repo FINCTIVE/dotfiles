@@ -25,7 +25,7 @@
     },
     // Terminal
     {
-        "key": "cmd+u c",
+        "key": "cmd+u y",
         "command": "workbench.action.terminal.copyLastCommandOutput",
     },
     {
