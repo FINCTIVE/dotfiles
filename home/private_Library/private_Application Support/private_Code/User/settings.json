@@ -442,5 +442,6 @@
     "editor.stickyScroll.enabled": true,
     "workbench.editor.enablePreview": false,
     // Disable code fold in the diff editor to prevent the Vim bug.
-    "diffEditor.hideUnchangedRegions.enabled": false
+    "diffEditor.hideUnchangedRegions.enabled": false,
+    "window.newWindowDimensions": "maximized"
 }
