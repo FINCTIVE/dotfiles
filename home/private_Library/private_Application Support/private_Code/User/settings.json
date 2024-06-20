@@ -77,15 +77,6 @@
         {
             "before": [
                 "<leader>",
-                "w",
-            ],
-            "commands": [
-                "editor.action.toggleWordWrap"
-            ],
-        },
-        {
-            "before": [
-                "<leader>",
                 "q"
             ],
             "commands": [
@@ -312,7 +303,7 @@
                 "git.closeAllDiffEditors",
             ],
         },
-        // e => editor navigation
+        // e => editor
         {
             "before": [
                 "<leader>",
@@ -353,6 +344,16 @@
             ],
             "commands": [
                 "editor.action.marker.prev",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "e",
+                "w"
+            ],
+            "commands": [
+                "editor.action.toggleWordWrap"
             ],
         },
         // r => refactor
@@ -417,6 +418,28 @@
                 "workbench.action.moveEditorRightInGroup"
             ],
         },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "g"
+            ],
+            "commands": [
+                "workbench.action.focusNextGroup"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "n"
+            ],
+            "commands": [
+                "workbench.action.splitEditor",
+                "workbench.action.files.newUntitledFile",
+                "workbench.action.closeOtherEditors"
+            ],
+        }
     ],
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
