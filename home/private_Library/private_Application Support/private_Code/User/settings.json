@@ -451,6 +451,7 @@
             ],
         }
     ],
+    // Apperence
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
@@ -462,11 +463,16 @@
     "editor.minimap.enabled": false,
     "window.commandCenter": false,
     "workbench.layoutControl.enabled": false,
+    // Source Control
+    "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "never",
+    "scm.defaultViewMode": "tree",
+    "scm.showActionButton": false,
+    "git.showCommitInput": false,
+    "diffEditor.hideUnchangedRegions.enabled": false, // prevent vim bug
     // Editor
     "files.autoSave": "onFocusChange",
     "explorer.confirmDragAndDrop": false,
-    "git.autofetch": true,
-    "git.openRepositoryInParentFolders": "never",
     "update.mode": "manual",
     "editor.wordWrap": "on",
     "editor.rulers": [
@@ -474,11 +480,7 @@
     ],
     "editor.accessibilitySupport": "off",
     "editor.stickyScroll.enabled": true,
+    "editor.hover.enabled": false,
     "workbench.editor.enablePreview": false,
-    // Disable code fold in the diff editor to prevent the Vim bug.
-    "diffEditor.hideUnchangedRegions.enabled": false,
-    "window.newWindowDimensions": "maximized",
-    "scm.defaultViewMode": "tree",
-    "git.showCommitInput": false,
-    "scm.showActionButton": false
+    "window.newWindowDimensions": "maximized"
 }
