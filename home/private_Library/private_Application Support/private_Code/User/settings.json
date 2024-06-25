@@ -482,5 +482,6 @@
     "editor.stickyScroll.enabled": true,
     "editor.hover.enabled": false,
     "workbench.editor.enablePreview": false,
-    "window.newWindowDimensions": "maximized"
+    "window.newWindowDimensions": "maximized",
+    "workbench.startupEditor": "newUntitledFile"
 }
