@@ -458,6 +458,7 @@
     "git.autofetch": true,
     "git.openRepositoryInParentFolders": "never",
     "update.mode": "manual",
+    "editor.wordWrap": "on",
     "editor.rulers": [
         120
     ],
