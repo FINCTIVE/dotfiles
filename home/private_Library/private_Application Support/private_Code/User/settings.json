@@ -439,6 +439,16 @@
                 "workbench.action.files.newUntitledFile",
                 "workbench.action.closeOtherEditors"
             ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.closeOtherEditors"
+            ],
         }
     ],
     "window.autoDetectColorScheme": true,
@@ -467,5 +477,8 @@
     "workbench.editor.enablePreview": false,
     // Disable code fold in the diff editor to prevent the Vim bug.
     "diffEditor.hideUnchangedRegions.enabled": false,
-    "window.newWindowDimensions": "maximized"
+    "window.newWindowDimensions": "maximized",
+    "scm.defaultViewMode": "tree",
+    "git.showCommitInput": false,
+    "scm.showActionButton": false
 }
