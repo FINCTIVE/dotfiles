@@ -449,7 +449,58 @@
             "commands": [
                 "workbench.action.closeOtherEditors"
             ],
-        }
+        },
+        // t => panel
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "h"
+            ],
+            "commands": [
+                "workbench.action.problems.focus"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "j"
+            ],
+            "commands": [
+                "workbench.panel.output.focus"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "k"
+            ],
+            "commands": [
+                "workbench.debug.action.focusRepl"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "l"
+            ],
+            "commands": [
+                "terminal.focus"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                ";"
+            ],
+            "commands": [
+                "workbench.panel.testResults.view.focus"
+            ],
+        },
     ],
     // Apperence
     "window.autoDetectColorScheme": true,
@@ -483,5 +534,6 @@
     "editor.hover.enabled": false,
     "workbench.editor.enablePreview": false,
     "window.newWindowDimensions": "maximized",
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "window.openFoldersInNewWindow": "on"
 }
