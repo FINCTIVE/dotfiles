@@ -49,14 +49,6 @@
         },
         {
             "before": [
-                "Q"
-            ],
-            "commands": [
-                "workbench.action.closeActiveEditor"
-            ]
-        },
-        {
-            "before": [
                 "/",
             ],
             "commands": [
@@ -83,6 +75,15 @@
                 "workbench.action.closePanel",
                 "notifications.clearAll",
                 "closeFindWidget"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "x"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
             ]
         },
         {
@@ -260,6 +261,16 @@
             ],
             "commands": [
                 "workbench.action.openRecent"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "l"
+            ],
+            "commands": [
+                "editor.action.openLink"
             ],
         },
         // s => source control
