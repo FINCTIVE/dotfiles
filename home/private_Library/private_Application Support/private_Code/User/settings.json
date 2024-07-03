@@ -135,10 +135,20 @@
             "before": [
                 "<leader>",
                 "d",
-                "g"
+                "f"
             ],
             "commands": [
                 "workbench.action.debug.start"
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "g"
+            ],
+            "commands": [
+                "workbench.action.debug.selectandstart"
             ],
         },
         {
@@ -302,6 +312,16 @@
             ],
             "commands": [
                 "git.openFile",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "s",
+                "t"
+            ],
+            "commands": [
+                "timeline.focus",
             ],
         },
         {
