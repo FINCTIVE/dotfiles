@@ -481,11 +481,11 @@
                 "workbench.action.closeOtherEditors"
             ],
         },
-        // t => panel
+        // b => bottom panel
         {
             "before": [
                 "<leader>",
-                "t",
+                "b",
                 "h"
             ],
             "commands": [
@@ -495,7 +495,7 @@
         {
             "before": [
                 "<leader>",
-                "t",
+                "b",
                 "j"
             ],
             "commands": [
@@ -505,7 +505,7 @@
         {
             "before": [
                 "<leader>",
-                "t",
+                "b",
                 "k"
             ],
             "commands": [
@@ -515,7 +515,7 @@
         {
             "before": [
                 "<leader>",
-                "t",
+                "b",
                 "l"
             ],
             "commands": [
@@ -525,7 +525,7 @@
         {
             "before": [
                 "<leader>",
-                "t",
+                "b",
                 ";"
             ],
             "commands": [
