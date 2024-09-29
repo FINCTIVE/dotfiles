@@ -564,6 +564,7 @@
     "editor.stickyScroll.enabled": true,
     "editor.hover.enabled": false,
     "window.newWindowDimensions": "maximized",
-    "workbench.startupEditor": "newUntitledFile",
+    "window.restoreWindows": "all",
+    "workbench.startupEditor": "none",
     "window.openFoldersInNewWindow": "on"
 }
