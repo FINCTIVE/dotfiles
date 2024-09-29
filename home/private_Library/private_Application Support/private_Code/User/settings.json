@@ -52,7 +52,7 @@
                 "/",
             ],
             "commands": [
-                "actions.find",
+                "editor.action.startFindReplaceAction"
             ],
             "when": "editorFocus || editorIsOpen"
         },
@@ -176,7 +176,7 @@
             "before": [
                 "<leader>",
                 "t",
-                "g"
+                "f"
             ],
             "commands": [
                 "testing.debugAtCursor"
@@ -551,7 +551,7 @@
     "scm.defaultViewMode": "tree",
     "scm.showActionButton": false,
     "git.showCommitInput": false,
-    "diffEditor.hideUnchangedRegions.enabled": false, // prevent vim bug
+    "diffEditor.hideUnchangedRegions.enabled": false,
     // Editor
     "files.autoSave": "onFocusChange",
     "explorer.confirmDragAndDrop": false,
@@ -563,7 +563,6 @@
     "editor.accessibilitySupport": "off",
     "editor.stickyScroll.enabled": true,
     "editor.hover.enabled": false,
-    "workbench.editor.enablePreview": false,
     "window.newWindowDimensions": "maximized",
     "workbench.startupEditor": "newUntitledFile",
     "window.openFoldersInNewWindow": "on"
