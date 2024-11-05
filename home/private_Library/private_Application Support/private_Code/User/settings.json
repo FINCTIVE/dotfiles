@@ -104,20 +104,6 @@
                 "workbench.action.editor.changeLanguageMode"
             ]
         },
-        // copy & paste
-        // store into 'a' register: "ay
-        // paste from 'a' register:
-        {
-            "before": [
-                "<leader>",
-                "v"
-            ],
-            "after": [
-                "\"",
-                "a",
-                "p"
-            ]
-        },
         // d => debugger
         {
             "before": [
