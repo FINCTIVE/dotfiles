@@ -89,11 +89,19 @@
         {
             "before": [
                 "<leader>",
-                "z"
+                "X"
             ],
             "commands": [
-                "workbench.action.toggleSidebarVisibility",
-                "workbench.action.toggleActivityBarVisibility"
+                "workbench.action.revertAndCloseActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.editor.changeLanguageMode"
             ]
         },
         // copy & paste
@@ -481,6 +489,17 @@
                 "workbench.action.closeOtherEditors"
             ],
         },
+        {
+            "before": [
+                "<leader>",
+                "w",
+                "z"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility",
+                "workbench.action.toggleActivityBarVisibility"
+            ],
+        },
         // b => bottom panel
         {
             "before": [
@@ -541,7 +560,6 @@
     "window.autoDetectColorScheme": true,
     "workbench.preferredDarkColorTheme": "GitHub Dark",
     "workbench.preferredLightColorTheme": "GitHub Light",
-    "workbench.colorTheme": "GitHub Light",
     "editor.bracketPairColorization.enabled": false,
     "editor.fontSize": 14,
     "terminal.integrated.fontSize": 14,
@@ -564,6 +582,7 @@
     "editor.rulers": [
         120
     ],
+    "files.defaultLanguage": "markdown",
     "[markdown]": {
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 80
@@ -574,5 +593,5 @@
     "window.newWindowDimensions": "maximized",
     "window.restoreWindows": "all",
     "workbench.startupEditor": "none",
-    "window.openFoldersInNewWindow": "on",
+    "window.openFoldersInNewWindow": "on"
 }
