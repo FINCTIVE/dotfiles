@@ -1,6 +1,7 @@
 {
     // Vim
     "vim.useSystemClipboard": true,
+    "vim.replaceWithRegister": true, // {Visual}gr 
     "vim.foldfix": true,
     // Vim Keybindings
     "vim.visualModeKeyBindingsNonRecursive": [
