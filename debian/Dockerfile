@@ -1,8 +1,8 @@
 FROM debian:latest
 
 WORKDIR /setup-scripts
-COPY ./scripts/*.sh  .
-RUN apt-get update && apt-get install -y sudo && sh setup_cli.sh && sh setup_cli_k8s.sh
+COPY ./setup.sh .
+RUN apt-get update && apt-get install -y sudo && sh setup.sh
 
 WORKDIR /
 EXPOSE 8080
