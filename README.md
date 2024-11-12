@@ -4,5 +4,5 @@
 Set up Debian server:
 
 ```
-sh <(curl -L "https://raw.githubusercontent.com/FINCTIVE/dotfiles/main/debian/scripts/setup_cli.sh")
+sh <(curl -L "https://raw.githubusercontent.com/FINCTIVE/dotfiles/main/debian/setup.sh")
 ```
