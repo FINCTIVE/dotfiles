@@ -6,7 +6,7 @@ sudo apt-get install -y --no-install-recommends \
   procps lsof \
   iproute2 net-tools iputils-ping netcat-openbsd \
   ca-certificates curl wget \
-  htop ncdu nload tcpdump \
+  btop ncdu nload tcpdump \
   git zsh vim \
   zoxide nnn fzf jq
 
