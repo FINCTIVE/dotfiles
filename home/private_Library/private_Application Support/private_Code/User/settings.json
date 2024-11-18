@@ -232,10 +232,20 @@
             "before": [
                 "<leader>",
                 "g",
-                "o"
+                "y"
             ],
             "commands": [
                 "workbench.action.gotoSymbol",
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "o"
+            ],
+            "commands": [
+                "outline.focus",
             ],
         },
         {
@@ -580,5 +590,6 @@
     "window.newWindowDimensions": "maximized",
     "window.restoreWindows": "all",
     "workbench.startupEditor": "none",
-    "window.openFoldersInNewWindow": "on"
+    "window.openFoldersInNewWindow": "on",
+    "workbench.colorTheme": "GitHub Dark"
 }
