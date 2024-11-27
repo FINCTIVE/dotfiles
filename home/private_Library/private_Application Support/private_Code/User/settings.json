@@ -232,20 +232,10 @@
             "before": [
                 "<leader>",
                 "g",
-                "y"
-            ],
-            "commands": [
-                "workbench.action.gotoSymbol",
-            ],
-        },
-        {
-            "before": [
-                "<leader>",
-                "g",
                 "o"
             ],
             "commands": [
-                "outline.focus",
+                "workbench.action.gotoSymbol",
             ],
         },
         {
