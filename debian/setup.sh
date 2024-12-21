@@ -8,7 +8,7 @@ sudo apt-get install -y --no-install-recommends \
   ca-certificates curl wget \
   btop ncdu nload tcpdump \
   git zsh vim \
-  zoxide nnn fzf jq
+  zoxide nnn fzf jq fd-find
 
 # zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
