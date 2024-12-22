@@ -15,7 +15,7 @@ map('v', 'L', '$')
 
 -- Tab management
 map('n', '\\x', ':q<CR>')
-map('n', '\\X', ':q!<CR>')
+map('n', '\\Xx', ':q!<CR>')
 map('n', '\\Xa', ':qa!<CR>')
 map('n', '\\t', ':tabnew<CR>', { desc = 'New tab' })
 map('n', '<C-p>', ':tabnext<CR>', { silent = true })

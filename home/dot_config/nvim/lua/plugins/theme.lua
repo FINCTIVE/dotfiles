@@ -5,16 +5,13 @@ function M.setup()
         options = {
             transparent = true,
             styles = {
-                comments = "italic",
                 keywords = "bold",
-                functions = "NONE",
-                variables = "NONE",
             },
         }
     })
 
     -- Set the colorscheme
-    vim.cmd.colorscheme("github_dark")
+    vim.cmd.colorscheme("github_dark_default")
 
     -- Ensure background transparency is applied
     vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
