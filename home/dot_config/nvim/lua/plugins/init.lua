@@ -10,7 +10,42 @@ return {
             "numToStr/Comment.nvim",
         },
         config = function()
-            require("plugins.lsp").setup()
+            require("plugins.code_intelligence").setup_lsp()
+        end
+    },
+    {
+        "hrsh7th/nvim-cmp",
+        config = function()
+            require("plugins.code_intelligence").setup_completion()
+        end
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function()
+            require("plugins.code_intelligence").setup_treesitter()
+        end
+    },
+    -- Editor
+    {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.8',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            {
+                'nvim-telescope/telescope-fzf-native.nvim',
+                build = 'make'
+            },
+            'nvim-telescope/telescope-ui-select.nvim'
+        },
+        config = function()
+            require("plugins.telescope").setup()
+        end
+    },
+    {
+        "otavioschwanck/arrow.nvim",
+        opts = function()
+            return require("keymaps").arrow_opts
         end
     },
     {
@@ -20,38 +55,34 @@ return {
         },
     },
     {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
+        'lewis6991/gitsigns.nvim',
         config = function()
-            require("plugins.treesitter").setup()
+            require('gitsigns').setup()
         end
     },
-    {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.8',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            {
-                'nvim-telescope/telescope-fzf-native.nvim',
-                build = 'make'
-            }
-        },
-        config = function()
-            require("plugins.telescope").setup()
-        end
-    },
+    -- Theme
     {
         "projekt0n/github-nvim-theme",
         lazy = false,
         priority = 1000,
         config = function()
-            require("plugins.theme").setup()
+            require("plugins.theme").setup_theme()
         end
     },
     {
-        "hrsh7th/nvim-cmp",
-        config = function()
-            require("plugins.cmp").setup()
+        "shortcuts/no-neck-pain.nvim",
+        version = "*",
+        opts = function()
+            return require("plugins.theme").setup_no_neck_pain()
         end
+    },
+
+    -- File
+    {
+        "stevearc/oil.nvim",
+        opts = {},
+        config = function()
+            require("plugins.file").setup_oil()
+        end,
     }
 }

@@ -1,3 +1,7 @@
+-- opt
+vim.opt.hidden = true             -- Allow switching buffers without saving
+vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -12,8 +16,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Load core configurations
-require("core").setup()
-
 -- Initialize plugins
 require("lazy").setup(require("plugins"))
+
+-- Load keymaps
+require("keymaps").setup()
