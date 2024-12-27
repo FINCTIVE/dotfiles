@@ -37,6 +37,19 @@ function M.setup_theme()
 
     vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#333333" })
     vim.api.nvim_set_hl(0, 'TelescopeSelection', { bg = 'NONE' })
+
+    -- Less colorful
+    vim.api.nvim_set_hl(0, '@function', { link = 'Function' })
+    vim.api.nvim_set_hl(0, '@function.call', { link = 'Function' })
+    vim.api.nvim_set_hl(0, '@method', { link = 'Function' })
+
+    vim.api.nvim_set_hl(0, '@variable', { link = 'Identifier' })
+    vim.api.nvim_set_hl(0, '@variable.member', { link = 'Identifier' })
+    vim.api.nvim_set_hl(0, '@constant', { link = 'Identifier' })
+    vim.api.nvim_set_hl(0, '@field', { link = 'Identifier' })
+    vim.api.nvim_set_hl(0, '@type', { link = 'Identifier' })
+    vim.api.nvim_set_hl(0, '@property', { link = 'Identifier' })
+    vim.api.nvim_set_hl(0, '@constructor', { link = 'Identifier' })
 end
 
 function M.setup_no_neck_pain()
