@@ -6,20 +6,17 @@ function M.setup()
             extensions = {
                 fzf = {}
             },
-            layout_strategy = 'vertical',
-            layout_config = {
-                width = 0.9,
-                height = 0.9,
-                preview_height = 0.6,
-            },
-            borderchars = {
-                "─", "│", "─", "│", "┌", "┐", "┘", "└"
-            },
             mappings = {
                 i = {
                     ["<esc>"] = require('telescope.actions').close
                 },
             },
+            layout_strategy = 'vertical',
+            layout_config = {
+                width = 100,
+                preview_height = 0.4,
+            },
+            borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
         }
     }
 
