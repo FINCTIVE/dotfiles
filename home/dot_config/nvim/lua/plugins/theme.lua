@@ -64,8 +64,10 @@ function M.setup_theme()
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
 
     if is_dark then
-        local bg_color = "#21262d" -- match github dark theme
+        -- local bg_color = "#21262d" -- match github dark theme
+        local bg_color = "#242936" -- match ayu mirage theme
         vim.api.nvim_set_hl(0, "CursorLine", { bg = bg_color })
+        vim.api.nvim_set_hl(0, "ColorColumn", { bg = bg_color })
     end
 end
 
