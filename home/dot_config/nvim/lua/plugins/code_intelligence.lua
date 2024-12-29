@@ -80,6 +80,11 @@ function M.setup_lsp()
         },
     }
 
+    -- config
+    vim.diagnostic.config({
+        virtual_text = false, -- Disables inline diagnostics text
+    })
+
     -- LSP Keybindings
     vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)

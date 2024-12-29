@@ -6,26 +6,31 @@ M.arrow_opts = {
 }
 
 function M.setup()
-    -- Basic navigation
+    local telescope = require('telescope.builtin')
+
+    -- key
     vim.keymap.set('n', 'H', '^', { noremap = true })
     vim.keymap.set('n', 'L', '$', { noremap = true })
     vim.keymap.set('v', 'H', '^', { noremap = true })
     vim.keymap.set('v', 'L', '$', { noremap = true })
 
-    -- buffer management
+    vim.keymap.set('n', 'q:', '<nop>', { silent = true })
+
+    -- buffer
     vim.keymap.set('n', '<leader>x', ':bd<CR>', { noremap = true })
     vim.keymap.set('n', '<leader>X', ':bd!<CR>', { noremap = true })
     vim.keymap.set('n', '<leader>Q', ':qa!<CR>', { noremap = true })
     vim.keymap.set('n', '<leader>t', ':tabnew<CR>', { noremap = true, desc = 'New tab' })
     vim.keymap.set('n', '<C-p>', ':bnext<CR>', { noremap = true, silent = true })
     vim.keymap.set('n', '<C-n>', ':bprevious<CR>', { noremap = true, silent = true })
-    vim.keymap.set('n', '<leader>z', ':NoNeckPain<CR>', { noremap = true, silent = true })
 
-    vim.keymap.set('n', '<leader>w', function()
-        vim.wo.wrap = not vim.wo.wrap
-    end, { noremap = true, silent = true, desc = 'Toggle word wrap' })
+    -- quickfix
+    vim.keymap.set('n', '<leader>co', '<cmd>copen<CR>', { noremap = true })
+    vim.keymap.set('n', '<leader>cc', '<cmd>cclose<CR>', { noremap = true })
+    vim.keymap.set('n', '[c', '<cmd>cprevious<CR>', { noremap = true })
+    vim.keymap.set('n', ']c', '<cmd>cnext<CR>', { noremap = true })
 
-    -- special keymaps
+    -- editor
     vim.keymap.set('n', '<leader>q', function()
         vim.cmd('cclose')
         vim.cmd('lclose')
@@ -33,25 +38,12 @@ function M.setup()
         vim.cmd('only') -- Close all other windows
     end, { noremap = true, silent = true })
 
-    -- telescope
-    local telescope = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>gb', telescope.buffers, { noremap = true })
-    vim.keymap.set('n', '<leader>gg', telescope.find_files, { noremap = true })
-    vim.keymap.set('n', '<leader>gr', telescope.oldfiles, { noremap = true })
-    vim.keymap.set('n', '<leader>gs', telescope.live_grep, { noremap = true })
-    vim.keymap.set('n', '<leader>gh', telescope.help_tags, { noremap = true })
-    vim.keymap.set('n', '<leader>go', function()
-        telescope.lsp_document_symbols({ symbol_width = 0.7 })
-    end, { noremap = true })
-    vim.keymap.set('n', '<leader>ru', telescope.lsp_references, { noremap = true })
-    vim.keymap.set('n', '<leader>ri', telescope.lsp_implementations, { noremap = true })
-    vim.keymap.set('n', '<leader>ee', telescope.diagnostics, { noremap = true })
+    vim.keymap.set('n', '<leader>w', function()
+        vim.wo.wrap = not vim.wo.wrap
+    end, { noremap = true, silent = true, desc = 'Toggle word wrap' })
 
-    vim.keymap.set('n', '<leader>ss', telescope.git_status, { noremap = true })
 
-    vim.keymap.set('n', '<leader>fc', telescope.commands, { noremap = true })
-
-    -- gitsigns
+    -- git
     local gitsigns = require('gitsigns')
     vim.keymap.set('n', '<leader>ej', function()
         if vim.wo.diff then
@@ -76,38 +68,57 @@ function M.setup()
     vim.keymap.set('n', '<leader>so', gitsigns.toggle_deleted, { noremap = true })
     vim.keymap.set('n', '<leader>sb', gitsigns.blame_line, { noremap = true })
 
-    -- files
+    -- apperence
+    vim.keymap.set('n', '<leader>z', ':NoNeckPain<CR>', { noremap = true, silent = true })
+
+    -- tools
+    vim.keymap.set('n', '<leader>gb', telescope.buffers, { noremap = true })
     vim.keymap.set('n', '<leader>gf', ':Oil<CR>', { noremap = true })
+    local find_files_with_hidden = function() telescope.find_files({ hidden = true, no_ignore = true }) end
+    vim.keymap.set('n', '<leader>gG', find_files_with_hidden, { noremap = true })
+    vim.keymap.set('n', '<leader>gg', telescope.find_files, { noremap = true })
+    vim.keymap.set('n', '<leader>gr', function() telescope.oldfiles({ only_cwd = true }) end, { noremap = true })
+    vim.keymap.set('n', '<leader>gs', telescope.live_grep, { noremap = true })
+    vim.keymap.set('n', '<leader>go', function()
+        telescope.lsp_document_symbols({ symbol_width = 0.7 })
+    end, { noremap = true })
+
+    vim.keymap.set('n', '<leader>ss', telescope.git_status, { noremap = true })
+
+    vim.keymap.set('n', '<leader>fh', telescope.help_tags, { noremap = true })
+    vim.keymap.set('n', '<leader>fc', telescope.commands, { noremap = true })
+    vim.keymap.set('n', '<leader>frc', telescope.command_history, { noremap = true })
+    vim.keymap.set('n', '<leader>frq', telescope.quickfixhistory, { noremap = true })
+    vim.keymap.set('n', '<leader>frj', telescope.jumplist, { noremap = true })
+    vim.keymap.set('n', '<leader>frs', telescope.search_history, { noremap = true })
 end
 
 -- LSP-specific keymaps
 -- Triggered via LSP config callback
 function M.setup_lsp_keymaps(bufnr)
-    -- Code navigation
     vim.keymap.set('n', '<leader>f', vim.lsp.buf.format, { noremap = true, buffer = bufnr })
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { noremap = true, buffer = bufnr })
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap = true, buffer = bufnr })
-    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { noremap = true, buffer = bufnr })
 
-    -- Help
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, { noremap = true, buffer = bufnr })
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, { noremap = true, buffer = bufnr })
 
-    -- Code actions
-    vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { noremap = true, buffer = bufnr })
+    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { noremap = true, buffer = bufnr })
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { noremap = true, buffer = bufnr })
+
+    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { noremap = true, buffer = bufnr })
+    vim.keymap.set('n', '<leader>ru', vim.lsp.buf.references, { noremap = true, buffer = bufnr })
+    vim.keymap.set('n', '<leader>ri', vim.lsp.buf.implementation, { noremap = true })
+    vim.keymap.set('n', '<leader>ra', vim.lsp.buf.code_action, { noremap = true, buffer = bufnr })
 
     -- Diagnostics
+    local function diagnostic_to_qf_and_focus()
+        vim.diagnostic.setqflist()
+        vim.cmd('botright copen')
+    end
+    vim.keymap.set('n', '<leader>ee', diagnostic_to_qf_and_focus, { noremap = true, buffer = bufnr })
+
     vim.keymap.set('n', '<leader>eN', vim.diagnostic.goto_prev, { noremap = true, buffer = bufnr })
     vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next, { noremap = true, buffer = bufnr })
     vim.keymap.set('n', '<leader>el', vim.diagnostic.open_float, { noremap = true, buffer = bufnr })
-
-    -- Workspace
-    vim.keymap.set('n', '<leader>wr', ':LspRestart<CR>', { noremap = true, buffer = bufnr })
-    vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, { noremap = true, buffer = bufnr })
-    vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, { noremap = true, buffer = bufnr })
-    vim.keymap.set('n', '<leader>wl', function()
-        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end, { noremap = true, buffer = bufnr })
 end
 
 return M
