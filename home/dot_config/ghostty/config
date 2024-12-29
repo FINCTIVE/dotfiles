@@ -1,0 +1,19 @@
+theme = Ayu Mirage
+font-size = 14
+
+# generally disable most ligatures
+font-feature = -liga
+font-feature = -dlig
+font-feature = -calt
+
+macos-titlebar-proxy-icon = hidden
+
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+window-padding-x = 2,4
+
+# fix:
+# https://github.com/ghostty-org/ghostty/discussions/3151#discussioncomment-11678064
+keybind = ctrl+enter=text:\r
