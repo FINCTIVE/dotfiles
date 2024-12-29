@@ -1,4 +1,5 @@
-theme = Ayu Mirage
+# theme = Ayu Mirage
+theme = tokyonight
 font-size = 14
 
 # generally disable most ligatures
