@@ -1,4 +1,4 @@
-theme = dark:tokyonight,light:Github
+theme = dark:tokyonight,light:AtomOneLight
 font-size = 14
 
 # generally disable most ligatures
