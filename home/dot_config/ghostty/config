@@ -1,5 +1,4 @@
-# theme = Ayu Mirage
-theme = tokyonight
+theme = dark:tokyonight,light:Github
 font-size = 14
 
 # generally disable most ligatures
