@@ -1,46 +1,35 @@
 local M = {}
 
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldenable = true
-vim.opt.foldlevel = 12
+function M.setup_lua_snip()
+    require('luasnip').setup({
+        exit_roots = false,
+    })
+    require("luasnip.loaders.from_vscode").lazy_load()
+    require('keymaps').setup_luasnip_keymaps()
+end
 
--- Setup autocompletion with nvim-cmp
 function M.setup_completion()
     local cmp = require('cmp')
-    local luasnip = require('luasnip')
-
+    ---@diagnostic disable-next-line: missing-fields
     cmp.setup({
+        mapping = require('keymaps').setup_completion_keymaps(),
         snippet = {
             expand = function(args)
-                luasnip.lsp_expand(args.body)
+                require('luasnip').lsp_expand(args.body)
             end,
         },
-        mapping = cmp.mapping.preset.insert({
-            ['<C-Space>'] = cmp.mapping.complete(),
-            ['<CR>'] = cmp.mapping.confirm({ select = false }),
-            ['<Tab>'] = cmp.mapping(function(fallback)
-                if cmp.visible() then
-                    cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
-                else
-                    fallback()
-                end
-            end, { 'i', 's' }),
-
-            ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-            ['<C-f>'] = cmp.mapping.scroll_docs(4),
-            ['<C-e>'] = cmp.mapping.abort(),
-            ['<C-n>'] = cmp.mapping.select_next_item(),
-            ['<C-p>'] = cmp.mapping.select_prev_item(),
-        }),
         sources = {
-            { name = 'nvim_lsp' },
             { name = 'luasnip' },
+            { name = 'nvim_lsp' },
+            { name = 'buffer' },
+            { name = 'path' },
+            { name = 'cmdline' },
+            { name = 'nvim_lua' },
         },
+        preselect = cmp.PreselectMode.None, -- Do not use LSP pre-select result.
     })
 end
 
--- Setup LSP configuration
 function M.setup_lsp()
     local lspconfig = require('lspconfig')
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
@@ -91,9 +80,20 @@ function M.setup_lsp()
             require('keymaps').setup_lsp_keymaps(args.buf)
         end,
     })
+
+    vim.api.nvim_create_user_command('LspWorkspaces', function()
+        local new_buf = vim.api.nvim_create_buf(true, true)
+        vim.api.nvim_buf_set_lines(new_buf, 0, -1, false, vim.tbl_map(tostring, vim.lsp.buf.list_workspace_folders()))
+        vim.api.nvim_command('split')
+        vim.api.nvim_win_set_buf(0, new_buf)
+    end, {})
 end
 
--- Setup Treesitter for syntax highlighting and parsing
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = true
+vim.opt.foldlevel = 12
+
 function M.setup_treesitter()
     require("nvim-treesitter.configs").setup({
         highlight = {
@@ -101,17 +101,12 @@ function M.setup_treesitter()
             additional_vim_regex_highlighting = false,
         },
         indent = { enable = true },
-        fold = { enable = true },
-        ensure_installed = {
-            "lua",
-            "python",
-            "javascript",
-            "typescript",
-            "json",
-            "html",
-            "css",
-            "go",
-        },
+        ensure_installed = { "json", "yaml", "xml", "git_rebase", "gitcommit", "gitattributes", "diff" },
+        sync_install = false,
+        auto_install = true,
+        ignore_install = {},
+        modules = {},
+        update_strategy = "lockfile",
     })
 end
 

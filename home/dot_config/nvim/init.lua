@@ -1,5 +1,4 @@
 -- opt
-vim.opt.hidden = true             -- Allow switching buffers without saving
 vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
 
 -- Bootstrap lazy.nvim

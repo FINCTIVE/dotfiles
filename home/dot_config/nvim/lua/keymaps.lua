@@ -1,11 +1,12 @@
 local M = {}
 
 M.arrow_opts = {
-    leader_key = ';',        -- Recommended to be a single key
-    buffer_leader_key = 'm', -- Per Buffer Mappings
+    leader_key = '\\m',
+    buffer_leader_key = 'm',
 }
 
 function M.setup()
+    M.setup_command()
     local telescope = require('telescope.builtin')
 
     -- key
@@ -13,8 +14,6 @@ function M.setup()
     vim.keymap.set('n', 'L', '$', { noremap = true })
     vim.keymap.set('v', 'H', '^', { noremap = true })
     vim.keymap.set('v', 'L', '$', { noremap = true })
-
-    vim.keymap.set('n', 'q:', '<nop>', { silent = true })
 
     -- buffer
     vim.keymap.set('n', '<leader>x', ':bd<CR>', { noremap = true })
@@ -119,6 +118,58 @@ function M.setup_lsp_keymaps(bufnr)
     vim.keymap.set('n', '<leader>eN', vim.diagnostic.goto_prev, { noremap = true, buffer = bufnr })
     vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next, { noremap = true, buffer = bufnr })
     vim.keymap.set('n', '<leader>el', vim.diagnostic.open_float, { noremap = true, buffer = bufnr })
+end
+
+function M.setup_command()
+    -- Create a command CopyPath that copies absolute path to clipboard
+    vim.api.nvim_create_user_command('CopyPath', function()
+        local path = vim.fn.expand('%:p')
+        vim.fn.setreg('+', path)
+        print('Copied: ' .. path)
+    end, { desc = 'Copy absolute path to clipboard' })
+
+    -- Copy relative path
+    vim.api.nvim_create_user_command('CopyRelPath', function()
+        local path = vim.fn.expand('%')
+        vim.fn.setreg('+', path)
+        print('Copied: ' .. path)
+    end, { desc = 'Copy relative path to clipboard' })
+
+    -- Copy filename only
+    vim.api.nvim_create_user_command('CopyFileName', function()
+        local path = vim.fn.expand('%:t')
+        vim.fn.setreg('+', path)
+        print('Copied: ' .. path)
+    end, { desc = 'Copy filename to clipboard' })
+
+    -- Copy folder path
+    vim.api.nvim_create_user_command('CopyFolderPath', function()
+        local path = vim.fn.expand('%:p:h')
+        vim.fn.setreg('+', path)
+        print('Copied: ' .. path)
+    end, { desc = 'Copy folder path to clipboard' })
+end
+
+function M.setup_luasnip_keymaps()
+    local luasnip = require('luasnip')
+    vim.keymap.set({ "i", "s" }, "<C-j>", function() luasnip.jump(1) end, { silent = true })
+    vim.keymap.set({ "i", "s" }, "<C-k>", function() luasnip.jump(-1) end, { silent = true })
+end
+
+function M.setup_completion_keymaps()
+    local cmp = require('cmp')
+    return cmp.mapping.preset.insert({
+        ['<C-n>'] = cmp.mapping.select_next_item(),
+        ['<Tab>'] = cmp.mapping.select_next_item(),
+        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-e>'] = cmp.mapping.abort(),
+
+        ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    })
 end
 
 return M

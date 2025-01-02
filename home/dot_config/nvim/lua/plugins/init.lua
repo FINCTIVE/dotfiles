@@ -1,31 +1,28 @@
 return {
-    -- LSP Configuration
+    -- Code Intelligence
     {
         "neovim/nvim-lspconfig",
-        dependencies = {
-            "hrsh7th/nvim-cmp",         -- Autocompletion plugin
-            "hrsh7th/cmp-nvim-lsp",     -- LSP source for nvim-cmp
-            "saadparwaiz1/cmp_luasnip", -- Snippets source
-            "L3MON4D3/LuaSnip",         -- Snippets plugin
-            "numToStr/Comment.nvim",
-        },
         config = function()
             require("plugins.code_intelligence").setup_lsp()
         end
     },
     {
-        "folke/lazydev.nvim",
-        ft = "lua", -- only load on lua files
-        opts = {
-            library = {
-                -- See the configuration section for more details
-                -- Load luvit types when the `vim.uv` word is found
-                { path = "${3rd}/luv/library", words = { "vim%.uv" } },
-            },
-        },
+        "L3MON4D3/LuaSnip",
+        dependencies = { "rafamadriz/friendly-snippets" },
+        config = function()
+            require("plugins.code_intelligence").setup_lua_snip()
+        end
     },
     {
         "hrsh7th/nvim-cmp",
+        dependencies = {
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline',
+            'hrsh7th/cmp-nvim-lua',
+            'saadparwaiz1/cmp_luasnip',
+        },
         config = function()
             require("plugins.code_intelligence").setup_completion()
         end
@@ -36,6 +33,15 @@ return {
         config = function()
             require("plugins.code_intelligence").setup_treesitter()
         end
+    },
+    {
+        "folke/lazydev.nvim", -- setup lua lsp for neovim config
+        ft = "lua",
+        opts = {
+            library = {
+                { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+            },
+        },
     },
     -- Editor
     {
@@ -52,6 +58,9 @@ return {
         config = function()
             require("plugins.telescope").setup()
         end
+    },
+    {
+        "numToStr/Comment.nvim", -- Type "gc" or "gcc" to comment.
     },
     {
         "otavioschwanck/arrow.nvim",
@@ -86,6 +95,14 @@ return {
         opts = function()
             return require("plugins.theme").setup_no_neck_pain()
         end
+    },
+    {
+        "j-hui/fidget.nvim",
+        opts = require("plugins.theme").fidget_opts,
+    },
+    {
+        "m4xshen/smartcolumn.nvim",
+        opts = require("plugins.theme").smart_column_opts,
     },
 
     -- File
