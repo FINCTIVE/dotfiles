@@ -1,6 +1,6 @@
-theme = dark:tokyonight,light:AtomOneLight
-font-size = 14
+theme = dark:MaterialDarker,light:AtomOneLight
 
+font-size = 14
 # generally disable most ligatures
 font-feature = -liga
 font-feature = -dlig
