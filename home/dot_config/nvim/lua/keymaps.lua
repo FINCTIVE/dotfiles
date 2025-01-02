@@ -20,8 +20,8 @@ function M.setup()
     vim.keymap.set('n', '<leader>X', ':bd!<CR>', { noremap = true })
     vim.keymap.set('n', '<leader>Q', ':qa!<CR>', { noremap = true })
     vim.keymap.set('n', '<leader>t', ':tabnew<CR>', { noremap = true, desc = 'New tab' })
-    vim.keymap.set('n', '<C-p>', ':bnext<CR>', { noremap = true, silent = true })
-    vim.keymap.set('n', '<C-n>', ':bprevious<CR>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<C-p>', ':bprevious<CR>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<C-n>', ':bnext<CR>', { noremap = true, silent = true })
 
     -- quickfix
     vim.keymap.set('n', '<leader>co', '<cmd>copen<CR>', { noremap = true })

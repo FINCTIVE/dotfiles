@@ -3,6 +3,9 @@ success_symbol = "[>](bold green)"
 error_symbol = "[x](bold red)"
 vimcmd_symbol = "[<](bold green)"
 
+[git_branch]
+symbol = "git "
+
 [git_commit]
 tag_symbol = " tag "
 
@@ -69,9 +72,6 @@ symbol = "fossil "
 
 [gcloud]
 symbol = "gcp "
-
-[git_branch]
-symbol = "git "
 
 [golang]
 symbol = "go "

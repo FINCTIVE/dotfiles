@@ -1,18 +1,17 @@
 theme = dark:MaterialDarker,light:AtomOneLight
-
 font-size = 14
+
 # generally disable most ligatures
 font-feature = -liga
 font-feature = -dlig
 font-feature = -calt
 
-macos-titlebar-proxy-icon = hidden
-
+# block cursor
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
 
-window-padding-x = 2,4
+macos-titlebar-proxy-icon = hidden
 
 # fix:
 # https://github.com/ghostty-org/ghostty/discussions/3151#discussioncomment-11678064
