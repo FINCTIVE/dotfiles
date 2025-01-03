@@ -122,12 +122,12 @@ function M.setup_lsp_keymaps(bufnr)
     vim.keymap.set('n', '<leader>ri', vim.lsp.buf.implementation, { noremap = true })
     vim.keymap.set('n', '<leader>ra', vim.lsp.buf.code_action, { noremap = true, buffer = bufnr })
 
-    -- Diagnostics
-    local function diagnostic_to_qf_and_focus()
-        vim.diagnostic.setqflist()
-        vim.cmd('botright copen')
-    end
-    vim.keymap.set('n', '<leader>ee', diagnostic_to_qf_and_focus, { noremap = true, buffer = bufnr })
+    vim.keymap.set('n', '<leader>ee', function()
+        vim.diagnostic.setqflist({ open = true })
+    end, { noremap = true, buffer = bufnr })
+    vim.keymap.set('n', '<leader>eE', function()
+        vim.diagnostic.setqflist({ severity = vim.diagnostic.severity.ERROR })
+    end, { noremap = true, buffer = bufnr })
 
     vim.keymap.set('n', '<leader>eN', vim.diagnostic.goto_prev, { noremap = true, buffer = bufnr })
     vim.keymap.set('n', '<leader>en', vim.diagnostic.goto_next, { noremap = true, buffer = bufnr })
