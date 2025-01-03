@@ -5,6 +5,21 @@ M.arrow_opts = {
     buffer_leader_key = 'm',
 }
 
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'qf',
+    callback = function()
+        vim.keymap.set('n', '<CR>', function()
+            local line = vim.fn.line('.')
+            vim.cmd('cclose')
+            vim.cmd(line .. 'cc')
+        end, { buffer = true, noremap = true, silent = true })
+
+        vim.keymap.set('n', '<Esc>', function()
+            vim.cmd('cclose')
+        end, { buffer = true, noremap = true, silent = true })
+    end,
+})
+
 function M.setup()
     M.setup_command()
     local telescope = require('telescope.builtin')
@@ -24,8 +39,7 @@ function M.setup()
     vim.keymap.set('n', '<C-n>', ':bnext<CR>', { noremap = true, silent = true })
 
     -- quickfix
-    vim.keymap.set('n', '<leader>co', '<cmd>copen<CR>', { noremap = true })
-    vim.keymap.set('n', '<leader>cc', '<cmd>cclose<CR>', { noremap = true })
+    vim.keymap.set('n', '<leader>c', '<cmd>copen<CR>', { noremap = true })
     vim.keymap.set('n', '[c', '<cmd>cprevious<CR>', { noremap = true })
     vim.keymap.set('n', ']c', '<cmd>cnext<CR>', { noremap = true })
 
